@@ -1,0 +1,742 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Our Menu | Crab King</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/feather-icons/dist/feather.min.js"></script>
+    <script src="https://unpkg.com/feather-icons"></script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap');
+        body {
+            font-family: 'Poppins', sans-serif;
+            scroll-behavior: smooth;
+        }
+        .menu-hero {
+            background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),
+                        url('http://static.photos/food/1200x630/46');
+            background-size: cover;
+            background-position: center;
+        }
+        .menu-item {
+            transition: all 0.3s ease;
+        }
+        .menu-item:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+        }
+        .mobile-menu {
+            display: none;
+        }
+        .star-rating input {
+            display: none;
+        }
+        .star-rating label {
+            font-size: 24px;
+            color: #ccc;
+            cursor: pointer;
+        }
+        .star-rating input:checked ~ label {
+            color: #f5b301;
+        }
+        .star-rating label:hover,
+        .star-rating label:hover ~ label {
+            color: #f5b301;
+        }
+        .cart-item-count {
+            position: absolute;
+            top: -8px;
+            right: -8px;
+            background-color: #ef4444;
+            color: white;
+            border-radius: 50%;
+            width: 20px;
+            height: 20px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 12px;
+        }
+        .tab-button.active {
+            background-color: #ef4444;
+            color: white;
+        }
+    </style>
+</head>
+<body class="bg-gray-50">
+    <!-- Navigation -->
+    <nav class="bg-white shadow-lg sticky top-0 z-50">
+        <div class="container mx-auto px-6 py-3">
+            <div class="flex items-center justify-between">
+                <div class="flex items-center">
+                    <div class="text-2xl font-bold text-red-600">CRAB KING</div>
+                    <span class="ml-2 text-xs text-gray-500">Since 2021</span>
+                </div>
+                <div class="hidden md:flex space-x-8">
+                    <a href="index.html" class="text-gray-800 hover:text-red-600">Home</a>
+                    <a href="feature.html" class="text-gray-800 hover:text-red-600">Our Specialty</a>
+                    <a href="products.html" class="text-red-600 font-semibold">Menu</a>
+                    <a href="contact.html" class="text-gray-800 hover:text-red-600">Contact</a>
+                </div>
+                <div class="flex items-center space-x-4">
+                    <div class="relative">
+                        <button id="cart-button" class="text-gray-800 hover:text-red-600">
+                            <i data-feather="shopping-cart" class="w-6 h-6"></i>
+                            <span id="cart-count" class="cart-item-count hidden">0</span>
+                        </button>
+                    </div>
+                    <div class="md:hidden">
+                        <button class="outline-none mobile-menu-button">
+                            <i data-feather="menu" class="w-6 h-6 text-gray-800"></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+            <!-- Mobile Menu -->
+            <div class="mobile-menu hidden bg-white py-2">
+                <a href="index.html" class="block px-4 py-2 text-gray-800 hover:bg-gray-100">Home</a>
+                <a href="feature.html" class="block px-4 py-2 text-gray-800 hover:bg-gray-100">Our Specialty</a>
+                <a href="products.html" class="block px-4 py-2 text-red-600 font-semibold">Menu</a>
+                <a href="contact.html" class="block px-4 py-2 text-gray-800 hover:bg-gray-100">Contact</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Menu Hero -->
+    <section class="menu-hero text-white py-20 md:py-32">
+        <div class="container mx-auto px-6 text-center">
+            <h1 class="text-4xl md:text-6xl font-bold mb-6" data-aos="fade-down">Our Premium Menu</h1>
+            <p class="text-xl md:text-2xl mb-8" data-aos="fade-up" data-aos-delay="200">Discover our selection of exquisite seafood dishes</p>
+        </div>
+    </section>
+
+    <!-- Menu Navigation -->
+    <section class="py-8 bg-white sticky top-16 z-40 shadow-sm">
+        <div class="container mx-auto px-6">
+            <div class="flex flex-wrap justify-center gap-2">
+                <button class="tab-button active px-4 py-2 rounded-full" data-category="all">All Items</button>
+                <button class="tab-button px-4 py-2 rounded-full" data-category="crabs">Crabs</button>
+                <button class="tab-button px-4 py-2 rounded-full" data-category="shrimps">Shrimps</button>
+                <button class="tab-button px-4 py-2 rounded-full" data-category="lobsters">Lobsters</button>
+                <button class="tab-button px-4 py-2 rounded-full" data-category="platters">Platters</button>
+                <button class="tab-button px-4 py-2 rounded-full" data-category="sides">Sides</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Search and Filter -->
+    <section class="py-8 bg-gray-100">
+        <div class="container mx-auto px-6">
+            <div class="flex flex-col md:flex-row items-center justify-between gap-4">
+                <div class="w-full md:w-1/3">
+                    <div class="relative">
+                        <input type="text" id="search-input" placeholder="Search menu items..." class="w-full px-4 py-2 border border-gray-300 rounded-full focus:outline-none focus:ring-2 focus:ring-red-600">
+                        <i data-feather="search" class="absolute right-3 top-2.5 text-gray-400"></i>
+                    </div>
+                </div>
+                <div class="flex items-center space-x-4">
+                    <div class="flex items-center">
+                        <label for="sort-by" class="mr-2 text-gray-700">Sort by:</label>
+                        <select id="sort-by" class="px-3 py-1 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-red-600">
+                            <option value="popular">Most Popular</option>
+                            <option value="price-low">Price: Low to High</option>
+                            <option value="price-high">Price: High to Low</option>
+                            <option value="name">Alphabetical</option>
+                        </select>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Menu Items -->
+    <section class="py-16 bg-gray-100">
+        <div class="container mx-auto px-6">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8" id="menu-items-container">
+                <!-- Menu items will be dynamically inserted here -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Cart Modal -->
+    <div id="cart-modal" class="fixed inset-0 bg-black bg-opacity-50 z-50 hidden flex items-center justify-center">
+        <div class="bg-white rounded-lg shadow-xl w-full max-w-md max-h-[80vh] overflow-y-auto">
+            <div class="p-6">
+                <div class="flex justify-between items-center mb-6">
+                    <h3 class="text-2xl font-bold text-gray-800">Your Order</h3>
+                    <button id="close-cart" class="text-gray-500 hover:text-gray-700">
+                        <i data-feather="x" class="w-6 h-6"></i>
+                    </button>
+                </div>
+                <div id="cart-items" class="mb-6">
+                    <!-- Cart items will be dynamically inserted here -->
+                    <p class="text-gray-500 text-center py-8" id="empty-cart-message">Your cart is empty</p>
+                </div>
+                <div class="border-t border-gray-200 pt-4 mb-4">
+                    <div class="flex justify-between mb-2">
+                        <span class="text-gray-600">Subtotal:</span>
+                        <span class="font-bold" id="cart-subtotal">₱0</span>
+                    </div>
+                    <div class="flex justify-between mb-2">
+                        <span class="text-gray-600">Service Fee:</span>
+                        <span class="font-bold">₱50</span>
+                    </div>
+                    <div class="flex justify-between text-lg font-bold">
+                        <span>Total:</span>
+                        <span id="cart-total">₱50</span>
+                    </div>
+                </div>
+                <button id="checkout-button" class="w-full bg-red-600 hover:bg-red-700 text-white font-bold py-3 px-4 rounded-md transition duration-300">
+                    Proceed to Checkout
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Rating Modal -->
+    <div id="rating-modal" class="fixed inset-0 bg-black bg-opacity-50 z-50 hidden flex items-center justify-center">
+        <div class="bg-white rounded-lg shadow-xl w-full max-w-md">
+            <div class="p-6">
+                <div class="flex justify-between items-center mb-6">
+                    <h3 class="text-2xl font-bold text-gray-800">Rate This Item</h3>
+                    <button id="close-rating" class="text-gray-500 hover:text-gray-700">
+                        <i data-feather="x" class="w-6 h-6"></i>
+                    </button>
+                </div>
+                <div class="text-center mb-6">
+                    <h4 id="rating-item-name" class="text-xl font-semibold mb-2">Item Name</h4>
+                    <div class="star-rating flex justify-center">
+                        <input type="radio" id="star5" name="rating" value="5" />
+                        <label for="star5" title="5 stars">★</label>
+                        <input type="radio" id="star4" name="rating" value="4" />
+                        <label for="star4" title="4 stars">★</label>
+                        <input type="radio" id="star3" name="rating" value="3" />
+                        <label for="star3" title="3 stars">★</label>
+                        <input type="radio" id="star2" name="rating" value="2" />
+                        <label for="star2" title="2 stars">★</label>
+                        <input type="radio" id="star1" name="rating" value="1" />
+                        <label for="star1" title="1 star">★</label>
+                    </div>
+                </div>
+                <div class="mb-4">
+                    <label for="rating-comment" class="block text-gray-700 mb-2">Your Review (optional)</label>
+                    <textarea id="rating-comment" rows="3" class="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-red-600" placeholder="Share your experience..."></textarea>
+                </div>
+                <button id="submit-rating" class="w-full bg-red-600 hover:bg-red-700 text-white font-bold py-2 px-4 rounded-md transition duration-300">
+                    Submit Rating
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Call to Action -->
+    <section class="py-16 bg-red-600 text-white">
+        <div class="container mx-auto px-6 text-center">
+            <h2 class="text-3xl font-bold mb-6" data-aos="fade-down">Have Special Dietary Needs?</h2>
+            <p class="text-xl mb-8" data-aos="fade-up">We're happy to accommodate special requests</p>
+            <div data-aos="fade-up" data-aos-delay="200">
+                <a href="contact.html" class="bg-white hover:bg-gray-100 text-red-600 font-bold py-3 px-8 rounded-full inline-block transition duration-300">
+                    Contact Us
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-white py-12">
+        <div class="container mx-auto px-6">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+                <div>
+                    <div class="text-2xl font-bold text-red-600 mb-4">CRAB KING</div>
+                    <p class="text-gray-400">Premium seafood restaurant serving Angeles City since 2021.</p>
+                </div>
+                <div>
+                    <h3 class="text-lg font-bold mb-4">Quick Links</h3>
+                    <ul class="space-y-2">
+                        <li><a href="index.html" class="text-gray-400 hover:text-white transition duration-300">Home</a></li>
+                        <li><a href="feature.html" class="text-gray-400 hover:text-white transition duration-300">Our Specialty</a></li>
+                        <li><a href="products.html" class="text-red-500 font-semibold">Menu</a></li>
+                        <li><a href="contact.html" class="text-gray-400 hover:text-white transition duration-300">Contact</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h3 class="text-lg font-bold mb-4">Opening Hours</h3>
+                    <ul class="space-y-2 text-gray-400">
+                        <li class="flex justify-between">
+                            <span>Monday - Thursday</span>
+                            <span>11AM - 10PM</span>
+                        </li>
+                        <li class="flex justify-between">
+                            <span>Friday - Saturday</span>
+                            <span>11AM - 11PM</span>
+                        </li>
+                        <li class="flex justify-between">
+                            <span>Sunday</span>
+                            <span>11AM - 9PM</span>
+                        </li>
+                    </ul>
+                </div>
+                <div>
+                    <h3 class="text-lg font-bold mb-4">Follow Us</h3>
+                    <div class="flex space-x-4 mb-4">
+                        <a href="#" class="text-gray-400 hover:text-white transition duration-300">
+                            <i data-feather="facebook" class="w-6 h-6"></i>
+                        </a>
+                        <a href="#" class="text-gray-400 hover:text-white transition duration-300">
+                            <i data-feather="instagram" class="w-6 h-6"></i>
+                        </a>
+                        <a href="#" class="text-gray-400 hover:text-white transition duration-300">
+                            <i data-feather="twitter" class="w-6 h-6"></i>
+                        </a>
+                    </div>
+                    <div>
+                        <h4 class="font-bold mb-2">Subscribe to Newsletter</h4>
+                        <div class="flex">
+                            <input type="email" placeholder="Your Email" class="px-3 py-2 bg-gray-800 text-white rounded-l-md focus:outline-none w-full">
+                            <button class="bg-red-600 hover:bg-red-700 px-4 py-2 rounded-r-md transition duration-300">
+                                <i data-feather="send" class="w-4 h-4"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="border-t border-gray-800 mt-8 pt-8 text-center text-gray-400">
+                <p>&copy; 2023 Crab King. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        AOS.init({
+            duration: 800,
+            easing: 'ease-in-out',
+            once: true
+        });
+        feather.replace();
+
+        // Menu data
+        const menuItems = [
+            {
+                id: 1,
+                name: "Signature King Crab",
+                description: "Alaskan King Crab legs with our secret spice blend and garlic butter sauce",
+                price: 1299,
+                category: "crabs",
+                image: "http://static.photos/food/640x360/10",
+                rating: 4.8,
+                reviews: 124,
+                options: [
+                    { name: "Size", values: ["Small (500g)", "Medium (800g)", "Large (1.2kg)"] },
+                    { name: "Spice Level", values: ["Mild", "Medium", "Spicy"] }
+                ]
+            },
+            {
+                id: 2,
+                name: "Garlic Butter Shrimp",
+                description: "Jumbo shrimp sautéed in garlic butter sauce with herbs",
+                price: 599,
+                category: "shrimps",
+                image: "http://static.photos/food/640x360/11",
+                rating: 4.5,
+                reviews: 89,
+                options: [
+                    { name: "Size", values: ["Regular (10pcs)", "Large (15pcs)"] },
+                    { name: "Spice Level", values: ["Mild", "Medium", "Spicy"] }
+                ]
+            },
+            {
+                id: 3,
+                name: "Seafood Platter",
+                description: "Assorted seafood including crab, shrimp, mussels and clams",
+                price: 1499,
+                category: "platters",
+                image: "http://static.photos/food/640x360/12",
+                rating: 4.7,
+                reviews: 76,
+                options: [
+                    { name: "Size", values: ["Small (2-3 persons)", "Large (4-5 persons)"] }
+                ]
+            },
+            {
+                id: 4,
+                name: "Grilled Lobster",
+                description: "Fresh lobster grilled to perfection with lemon butter sauce",
+                price: 1799,
+                category: "lobsters",
+                image: "http://static.photos/food/640x360/13",
+                rating: 4.9,
+                reviews: 65,
+                options: [
+                    { name: "Size", values: ["Small (400g)", "Large (600g)"] }
+                ]
+            },
+            {
+                id: 5,
+                name: "Crab Fried Rice",
+                description: "Fragrant jasmine rice stir-fried with crab meat and vegetables",
+                price: 399,
+                category: "sides",
+                image: "http://static.photos/food/640x360/14",
+                rating: 4.3,
+                reviews: 42,
+                options: [
+                    { name: "Size", values: ["Regular", "Large"] }
+                ]
+            },
+            {
+                id: 6,
+                name: "Chili Crab",
+                description: "Singapore-style crab in rich, spicy chili tomato sauce",
+                price: 1199,
+                category: "crabs",
+                image: "http://static.photos/food/640x360/15",
+                rating: 4.6,
+                reviews: 58,
+                options: [
+                    { name: "Size", values: ["Small (500g)", "Medium (800g)", "Large (1.2kg)"] },
+                    { name: "Spice Level", values: ["Mild", "Medium", "Spicy"] }
+                ]
+            },
+            {
+                id: 7,
+                name: "Buttered Garlic Crab",
+                description: "Crab cooked in rich garlic butter sauce with parsley",
+                price: 1099,
+                category: "crabs",
+                image: "http://static.photos/food/640x360/16",
+                rating: 4.7,
+                reviews: 72,
+                options: [
+                    { name: "Size", values: ["Small (500g)", "Medium (800g)", "Large (1.2kg)"] }
+                ]
+            },
+            {
+                id: 8,
+                name: "Salt & Pepper Shrimp",
+                description: "Crispy shrimp seasoned with salt, pepper and five-spice",
+                price: 549,
+                category: "shrimps",
+                image: "http://static.photos/food/640x360/17",
+                rating: 4.4,
+                reviews: 47,
+                options: [
+                    { name: "Size", values: ["Regular (10pcs)", "Large (15pcs)"] }
+                ]
+            },
+            {
+                id: 9,
+                name: "Lobster Thermidor",
+                description: "Classic French-style lobster with creamy cheese sauce",
+                price: 1999,
+                category: "lobsters",
+                image: "http://static.photos/food/640x360/18",
+                rating: 4.8,
+                reviews: 38,
+                options: [
+                    { name: "Size", values: ["Small (400g)", "Large (600g)"] }
+                ]
+            },
+            {
+                id: 10,
+                name: "Seafood Pasta",
+                description: "Al dente pasta with mixed seafood in creamy tomato sauce",
+                price: 699,
+                category: "platters",
+                image: "http://static.photos/food/640x360/19",
+                rating: 4.2,
+                reviews: 53,
+                options: [
+                    { name: "Pasta Type", values: ["Spaghetti", "Fettuccine", "Penne"] }
+                ]
+            }
+        ];
+
+        // Cart functionality
+        let cart = [];
+        let currentRatingItem = null;
+
+        // Initialize the page
+        document.addEventListener('DOMContentLoaded', function() {
+            renderMenuItems();
+            setupEventListeners();
+        });
+
+        function renderMenuItems(items = menuItems) {
+            const container = document.getElementById('menu-items-container');
+            container.innerHTML = '';
+
+            items.forEach(item => {
+                const itemElement = document.createElement('div');
+                itemElement.className = 'menu-item bg-white rounded-lg overflow-hidden shadow-md';
+                itemElement.dataset.category = item.category;
+                itemElement.innerHTML = `
+                    <img src="${item.image}" alt="${item.name}" class="w-full h-48 object-cover">
+                    <div class="p-6">
+                        <div class="flex justify-between items-start mb-2">
+                            <h3 class="text-xl font-bold text-gray-800">${item.name}</h3>
+                            <span class="text-red-600 font-bold">₱${item.price.toLocaleString()}</span>
+                        </div>
+                        <p class="text-gray-600 mb-4">${item.description}</p>
+                        <div class="flex items-center mb-4">
+                            <div class="flex text-yellow-400 mr-2">
+                                ${renderStars(item.rating)}
+                            </div>
+                            <span class="text-gray-500 text-sm">(${item.reviews})</span>
+                        </div>
+                        <div class="flex justify-between items-center">
+                            <button class="rate-button text-gray-600 hover:text-red-600 text-sm" data-id="${item.id}">
+                                Rate this item
+                            </button>
+                            <button class="add-to-cart bg-red-600 hover:bg-red-700 text-white px-4 py-2 rounded-full text-sm transition duration-300" data-id="${item.id}">
+                                Add to Order
+                            </button>
+                        </div>
+                    </div>
+                `;
+                container.appendChild(itemElement);
+            });
+
+            feather.replace();
+        }
+
+        function renderStars(rating) {
+            let stars = '';
+            const fullStars = Math.floor(rating);
+            const hasHalfStar = rating % 1 >= 0.5;
+            
+            for (let i = 0; i < fullStars; i++) {
+                stars += '<i data-feather="star" class="w-4 h-4 fill-current"></i>';
+            }
+            
+            if (hasHalfStar) {
+                stars += '<i data-feather="star" class="w-4 h-4 fill-current" style="clip-path: polygon(0 0, 50% 0, 50% 100%, 0 100%);"></i>';
+            }
+            
+            const emptyStars = 5 - fullStars - (hasHalfStar ? 1 : 0);
+            for (let i = 0; i < emptyStars; i++) {
+                stars += '<i data-feather="star" class="w-4 h-4"></i>';
+            }
+            
+            return stars;
+        }
+
+        function setupEventListeners() {
+            // Tab filtering
+            document.querySelectorAll('.tab-button').forEach(button => {
+                button.addEventListener('click', function() {
+                    document.querySelectorAll('.tab-button').forEach(btn => btn.classList.remove('active'));
+                    this.classList.add('active');
+                    
+                    const category = this.dataset.category;
+                    if (category === 'all') {
+                        renderMenuItems();
+                    } else {
+                        const filteredItems = menuItems.filter(item => item.category === category);
+                        renderMenuItems(filteredItems);
+                    }
+                });
+            });
+
+            // Search functionality
+            document.getElementById('search-input').addEventListener('input', function() {
+                const searchTerm = this.value.toLowerCase();
+                const filteredItems = menuItems.filter(item => 
+                    item.name.toLowerCase().includes(searchTerm) || 
+                    item.description.toLowerCase().includes(searchTerm)
+                );
+                renderMenuItems(filteredItems);
+            });
+
+            // Sort functionality
+            document.getElementById('sort-by').addEventListener('change', function() {
+                const sortValue = this.value;
+                let sortedItems = [...menuItems];
+                
+                switch(sortValue) {
+                    case 'popular':
+                        sortedItems.sort((a, b) => b.reviews - a.reviews);
+                        break;
+                    case 'price-low':
+                        sortedItems.sort((a, b) => a.price - b.price);
+                        break;
+                    case 'price-high':
+                        sortedItems.sort((a, b) => b.price - a.price);
+                        break;
+                    case 'name':
+                        sortedItems.sort((a, b) => a.name.localeCompare(b.name));
+                        break;
+                }
+                
+                renderMenuItems(sortedItems);
+            });
+
+            // Add to cart buttons
+            document.addEventListener('click', function(e) {
+                if (e.target.classList.contains('add-to-cart')) {
+                    const itemId = parseInt(e.target.dataset.id);
+                    addToCart(itemId);
+                }
+                
+                if (e.target.classList.contains('rate-button')) {
+                    const itemId = parseInt(e.target.dataset.id);
+                    openRatingModal(itemId);
+                }
+            });
+
+            // Cart modal
+            document.getElementById('cart-button').addEventListener('click', openCartModal);
+            document.getElementById('close-cart').addEventListener('click', closeCartModal);
+            document.getElementById('checkout-button').addEventListener('click', checkout);
+
+            // Rating modal
+            document.getElementById('close-rating').addEventListener('click', closeRatingModal);
+            document.getElementById('submit-rating').addEventListener('click', submitRating);
+        }
+
+        function addToCart(itemId) {
+            const item = menuItems.find(i => i.id === itemId);
+            const existingItem = cart.find(i => i.id === itemId);
+            
+            if (existingItem) {
+                existingItem.quantity += 1;
+            } else {
+                cart.push({
+                    ...item,
+                    quantity: 1
+                });
+            }
+            
+            updateCartCount();
+            showAddToCartNotification(item.name);
+        }
+
+        function updateCartCount() {
+            const count = cart.reduce((total, item) => total + item.quantity, 0);
+            const cartCount = document.getElementById('cart-count');
+            
+            if (count > 0) {
+                cartCount.textContent = count;
+                cartCount.classList.remove('hidden');
+            } else {
+                cartCount.classList.add('hidden');
+            }
+        }
+
+        function showAddToCartNotification(itemName) {
+            const notification = document.createElement('div');
+            notification.className = 'fixed bottom-4 right-4 bg-green-500 text-white px-4 py-2 rounded-md shadow-lg flex items-center';
+            notification.innerHTML = `
+                <i data-feather="check-circle" class="w-5 h-5 mr-2"></i>
+                <span>Added ${itemName} to cart</span>
+            `;
+            document.body.appendChild(notification);
+            feather.replace();
+            
+            setTimeout(() => {
+                notification.classList.add('opacity-0', 'transition-opacity', 'duration-300');
+                setTimeout(() => notification.remove(), 300);
+            }, 2000);
+        }
+
+        function openCartModal() {
+            const modal = document.getElementById('cart-modal');
+            const cartItems = document.getElementById('cart-items');
+            const emptyMessage = document.getElementById('empty-cart-message');
+            
+            if (cart.length === 0) {
+                cartItems.innerHTML = '';
+                emptyMessage.classList.remove('hidden');
+            } else {
+                emptyMessage.classList.add('hidden');
+                cartItems.innerHTML = cart.map(item => `
+                    <div class="flex justify-between items-center mb-4 pb-4 border-b border-gray-200">
+                        <div class="flex items-center">
+                            <img src="${item.image}" alt="${item.name}" class="w-16 h-16 object-cover rounded-md mr-4">
+                            <div>
+                                <h4 class="font-bold">${item.name}</h4>
+                                <p class="text-gray-600 text-sm">₱${item.price.toLocaleString()} × ${item.quantity}</p>
+                            </div>
+                        </div>
+                        <div class="flex items-center">
+                            <span class="font-bold mr-4">₱${(item.price * item.quantity).toLocaleString()}</span>
+                            <button class="remove-item text-red-600 hover:text-red-800" data-id="${item.id}">
+                                <i data-feather="trash-2" class="w-4 h-4"></i>
+                            </button>
+                        </div>
+                    </div>
+                `).join('');
+                
+                // Add event listeners to remove buttons
+                document.querySelectorAll('.remove-item').forEach(button => {
+                    button.addEventListener('click', function() {
+                        const itemId = parseInt(this.dataset.id);
+                        removeFromCart(itemId);
+                    });
+                });
+            }
+            
+            // Update totals
+            const subtotal = cart.reduce((total, item) => total + (item.price * item.quantity), 0);
+            document.getElementById('cart-subtotal').textContent = `₱${subtotal.toLocaleString()}`;
+            document.getElementById('cart-total').textContent = `₱${(subtotal + 50).toLocaleString()}`;
+            
+            modal.classList.remove('hidden');
+            feather.replace();
+        }
+
+        function closeCartModal() {
+            document.getElementById('cart-modal').classList.add('hidden');
+        }
+
+        function removeFromCart(itemId) {
+            cart = cart.filter(item => item.id !== itemId);
+            updateCartCount();
+            openCartModal();
+        }
+
+        function checkout() {
+            alert('Thank you for your order! Your total is ₱' + (cart.reduce((total, item) => total + (item.price * item.quantity), 0) + 50).toLocaleString());
+            cart = [];
+            updateCartCount();
+            closeCartModal();
+        }
+
+        function openRatingModal(itemId) {
+            const item = menuItems.find(i => i.id === itemId);
+            currentRatingItem = item;
+            
+            document.getElementById('rating-item-name').textContent = item.name;
+            document.getElementById('rating-modal').classList.remove('hidden');
+        }
+
+        function closeRatingModal() {
+            document.getElementById('rating-modal').classList.add('hidden');
+            document.querySelectorAll('.star-rating input').forEach(input => input.checked = false);
+            document.getElementById('rating-comment').value = '';
+        }
+
+        function submitRating() {
+            const rating = document.querySelector('.star-rating input:checked')?.value;
+            
+            if (!rating) {
+                alert('Please select a star rating');
+                return;
+            }
+            
+            alert(`Thank you for rating "${currentRatingItem.name}" with ${rating} stars!`);
+            closeRatingModal();
+        }
+
+        // Mobile menu toggle
+        const mobileMenuButton = document.querySelector('.mobile-menu-button');
+        const mobileMenu = document.querySelector('.mobile-menu');
+        
+        mobileMenuButton.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+    </script>
+</body>
+</html>

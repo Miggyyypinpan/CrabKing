@@ -1,0 +1,40 @@
+Guidelines
+With the selected and proposed actual local business, create the following required web pages:
+
+A. Landing Page
+
+ A landing page is a standalone web page created specifically for a marketing or advertising campaign. Its primary purpose is to drive visitors to take a specific action, such as signing up for a newsletter, downloading an e-book, registering for a webinar, or making a purchase. The landing can literally contain anything which relates to the business. However, make sure that this page does not look redundant with the other page of vice versa.
+
+The created landing page before can be reuse but I suggest to make improvements if deem necessary.
+
+B. Feature Page
+
+A feature page is a dedicated web page that highlights and details a specific feature, capability, or aspect of a product or service. Unlike general product pages, which provide an overview of the entire product, feature pages dive deep into a particular element to explain its benefits, functionality, and how it solves specific customer needs.  Some of the purpose of this page are:
+
+To provide more detailed explanation about a product or service
+Highlights the unique aspects of a feature that set the product apart from competitors
+Helping to differentiate the brand and helps potential and current customers understand the feature better, often using visuals, diagrams, videos, or interactive elements. 
+The created feature page before can be reuse but it is highly recommended to make improvements by changing the content or putting additional content. This page should have infographics that is related and specific to the business or company.
+
+C. Product List Page
+
+A product list page  is a web page on an e-commerce or business website that displays a collection of products, often organized within a specific category, brand, or search result. It serves as an intermediate step in the customer journey, allowing users to browse and select items they may be interested in. Some of the purpose of this page are:
+
+Showing multiple products in a grid or list format, each with essential details such as product images, names, prices, ratings, and brief descriptions.
+Provides filters (e.g., price, size, color, brand) and sorting options (e.g., by popularity, price, or newest) to help users refine their search and find products that match their preferences quickly.
+Allows users to compare various products side-by-side based on key attributes, helping them make informed purchase decisions.
+Acts as a browsing tool that helps guide users toward product detail pages, where they can learn more about a specific item and make a purchase.
+Requirements:
+
+List of products or service should have an image, price, quantity(if applicable). Other details such as size, model, flavor, color, etc. should be also included when necessary.
+Each product or service should have a button that can be clicked which illustrate that the product or service has been selected. For products, this could be "Add to cart". For services, this could be "Avail service". This button should be working.
+Searching for a particular product should be available.
+Rating the product should be available. If there are too many products, a minimum of 10 products is enough to have this feature. The way to rate a product is should be something unique or distinct from the existing ones,
+D. Contact Us Page
+
+A Contact Us page is a dedicated page on a website that provides visitors with various ways to get in touch with the company, organization, or individual behind the site. This page serves as a critical touchpoint for communication, making it easy for users to ask questions, request support, provide feedback, or inquire about products and services. The fields to include in this should be but not limited to the following:
+
+Name of the customer
+Contact number of the customer
+Email Address of the customer
+Message to the company of the customer

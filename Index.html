@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Crab King | Premium Seafood Restaurant</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/feather-icons/dist/feather.min.js"></script>
+    <script src="https://unpkg.com/feather-icons"></script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap');
+        body {
+            font-family: 'Poppins', sans-serif;
+            scroll-behavior: smooth;
+        }
+        .hero {
+            background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),
+                        url('http://static.photos/food/1200x630/42');
+            background-size: cover;
+            background-position: center;
+        }
+        .menu-item:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+        }
+        .mobile-menu {
+            display: none;
+        }
+        .star-rating input {
+            display: none;
+        }
+        .star-rating label {
+            font-size: 24px;
+            color: #ccc;
+            cursor: pointer;
+        }
+        .star-rating input:checked ~ label {
+            color: #f5b301;
+        }
+        .star-rating label:hover,
+        .star-rating label:hover ~ label {
+            color: #f5b301;
+        }
+    </style>
+</head>
+<body class="bg-gray-50">
+    <!-- Navigation -->
+    <nav class="bg-white shadow-lg sticky top-0 z-50">
+        <div class="container mx-auto px-6 py-3">
+            <div class="flex items-center justify-between">
+                <div class="flex items-center">
+                    <div class="text-2xl font-bold text-red-600">CRAB KING</div>
+                    <span class="ml-2 text-xs text-gray-500">Since 2021</span>
+                </div>
+                <div class="hidden md:flex space-x-8">
+                    <a href="index.html" class="text-gray-800 hover:text-red-600">Home</a>
+                    <a href="feature.html" class="text-gray-800 hover:text-red-600">Our Specialty</a>
+                    <a href="products.html" class="text-gray-800 hover:text-red-600">Menu</a>
+                    <a href="contact.html" class="text-gray-800 hover:text-red-600">Contact</a>
+                </div>
+                <div class="md:hidden">
+                    <button class="outline-none mobile-menu-button">
+                        <i data-feather="menu" class="w-6 h-6 text-gray-800"></i>
+                    </button>
+                </div>
+            </div>
+            <!-- Mobile Menu -->
+            <div class="mobile-menu hidden bg-white py-2">
+                <a href="index.html" class="block px-4 py-2 text-gray-800 hover:bg-gray-100">Home</a>
+                <a href="feature.html" class="block px-4 py-2 text-gray-800 hover:bg-gray-100">Our Specialty</a>
+                <a href="products.html" class="block px-4 py-2 text-gray-800 hover:bg-gray-100">Menu</a>
+                <a href="contact.html" class="block px-4 py-2 text-gray-800 hover:bg-gray-100">Contact</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero text-white py-20 md:py-32">
+        <div class="container mx-auto px-6 text-center">
+            <h1 class="text-4xl md:text-6xl font-bold mb-6" data-aos="fade-down">Seafood Feast Like Never Before</h1>
+            <p class="text-xl md:text-2xl mb-8" data-aos="fade-up" data-aos-delay="200">Angeles City's Premier Destination for Fresh, Premium Seafood</p>
+            <div data-aos="fade-up" data-aos-delay="400">
+                <a href="products.html" class="bg-red-600 hover:bg-red-700 text-white font-bold py-3 px-8 rounded-full inline-block transition duration-300">
+                    Explore Our Menu
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Promo Banner -->
+    <section class="bg-red-600 text-white py-6">
+        <div class="container mx-auto px-6 text-center">
+            <p class="text-lg font-medium">🎉 Special Offer: Get 15% off on your first order! Use code <span class="font-bold">CRAB15</span> at checkout</p>
+        </div>
+    </section>
+
+    <!-- Featured Section -->
+    <section class="py-16 bg-white">
+        <div class="container mx-auto px-6">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl font-bold text-gray-800" data-aos="fade-down">Why Choose Crab King?</h2>
+                <p class="text-gray-600 mt-2" data-aos="fade-up">We're committed to delivering the best seafood experience</p>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div class="text-center p-6 rounded-lg" data-aos="fade-up" data-aos-delay="100">
+                    <div class="bg-red-100 w-16 h-16 mx-auto rounded-full flex items-center justify-center mb-4">
+                        <i data-feather="anchor" class="w-8 h-8 text-red-600"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-800 mb-2">Fresh Catch Daily</h3>
+                    <p class="text-gray-600">We source our seafood directly from local fishermen to ensure maximum freshness.</p>
+                </div>
+                <div class="text-center p-6 rounded-lg" data-aos="fade-up" data-aos-delay="200">
+                    <div class="bg-red-100 w-16 h-16 mx-auto rounded-full flex items-center justify-center mb-4">
+                        <i data-feather="heart" class="w-8 h-8 text-red-600"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-800 mb-2">Family Recipes</h3>
+                    <p class="text-gray-600">Our dishes are prepared using time-honored family recipes with a modern twist.</p>
+                </div>
+                <div class="text-center p-6 rounded-lg" data-aos="fade-up" data-aos-delay="300">
+                    <div class="bg-red-100 w-16 h-16 mx-auto rounded-full flex items-center justify-center mb-4">
+                        <i data-feather="star" class="w-8 h-8 text-red-600"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-800 mb-2">Premium Quality</h3>
+                    <p class="text-gray-600">Only the finest ingredients make it to your plate. We never compromise on quality.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials -->
+    <section class="py-16 bg-gray-100">
+        <div class="container mx-auto px-6">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl font-bold text-gray-800" data-aos="fade-down">What Our Customers Say</h2>
+                <p class="text-gray-600 mt-2" data-aos="fade-up">Don't just take our word for it</p>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <div class="bg-white p-6 rounded-lg shadow-md" data-aos="zoom-in">
+                    <div class="flex items-center mb-4">
+                        <div class="flex-shrink-0">
+                            <img src="http://static.photos/people/200x200/1" alt="Juan Dela Cruz" class="w-12 h-12 rounded-full">
+                        </div>
+                        <div class="ml-4">
+                            <h4 class="text-lg font-bold text-gray-800">Juan Dela Cruz</h4>
+                            <div class="flex text-yellow-400">
+                                <i data-feather="star" class="w-4 h-4 fill-current"></i>
+                                <i data-feather="star" class="w-4 h-4 fill-current"></i>
+                                <i data-feather="star" class="w-4 h-4 fill-current"></i>
+                                <i data-feather="star" class="w-4 h-4 fill-current"></i>
+                                <i data-feather="star" class="w-4 h-4 fill-current"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <p class="text-gray-600">"The King Crab was absolutely phenomenal! Best seafood I've had in Angeles. Will definitely be back!"</p>
+                </div>
+                <div class="bg-white p-6 rounded-lg shadow-md" data-aos="zoom-in" data-aos-delay="200">
+                    <div class="flex items-center mb-4">
+                        <div class="flex-shrink-0">
+                            <img src="http://static.photos/people/200x200/2" alt="Maria Santos" class="w-12 h-12 rounded-full">
+                        </div>
+                        <div class="ml-4">
+                            <h4 class="text-lg font-bold text-gray-800">Maria Santos</h4>
+                            <div class="flex text-yellow-400">
+                                <i data-feather="star" class="w-4 h-4 fill-current"></i>
+                                <i data-feather="star" class="w-4 h-4 fill-current"></i>
+                                <i data-feather="star" class="w-4 h-4 fill-current"></i>
+                                <i data-feather="star" class="w-4 h-4 fill-current"></i>
+                                <i data-feather="star" class="w-4 h-4 fill-current"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <p class="text-gray-600">"The seafood platter was perfect for our family gathering. Fresh, delicious, and great value for money!"</p>
+                </div>
+                <div class="bg-white p-6 rounded-lg shadow-md" data-aos="zoom-in" data-aos-delay="400">
+                    <div class="flex items-center mb-4">
+                        <div class="flex-shrink-0">
+                            <img src="http://static.photos/people/200x200/3" alt="Robert Johnson" class="w-12 h-12 rounded-full">
+                        </div>
+                        <div class="ml-4">
+                            <h4 class="text-lg font-bold text-gray-800">Robert Johnson</h4>
+                            <div class="flex text-yellow-400">
+                                <i data-feather="star" class="w-4 h-4 fill-current"></i>
+                                <i data-feather="star" class="w-4 h-4 fill-current"></i>
+                                <i data-feather="star" class="w-4 h-4 fill-current"></i>
+                                <i data-feather="star" class="w-4 h-4 fill-current"></i>
+                                <i data-feather="star" class="w-4 h-4 fill-current"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <p class="text-gray-600">"As a seafood lover, I can confidently say Crab King serves the best grilled lobster in town. Highly recommended!"</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Call to Action -->
+    <section class="py-16 bg-red-600 text-white">
+        <div class="container mx-auto px-6 text-center">
+            <h2 class="text-3xl font-bold mb-6" data-aos="fade-down">Ready to Experience Crab King?</h2>
+            <p class="text-xl mb-8" data-aos="fade-up">Reserve your table now or order for takeout/delivery</p>
+            <div class="flex flex-col md:flex-row justify-center gap-4" data-aos="fade-up" data-aos-delay="200">
+                <a href="contact.html" class="bg-white hover:bg-gray-100 text-red-600 font-bold py-3 px-8 rounded-full inline-block transition duration-300">
+                    Book a Table
+                </a>
+                <a href="products.html" class="border-2 border-white hover:bg-red-700 text-white font-bold py-3 px-8 rounded-full inline-block transition duration-300">
+                    Order Online
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-white py-12">
+        <div class="container mx-auto px-6">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+                <div>
+                    <div class="text-2xl font-bold text-red-600 mb-4">CRAB KING</div>
+                    <p class="text-gray-400">Premium seafood restaurant serving Angeles City since 2021.</p>
+                </div>
+                <div>
+                    <h3 class="text-lg font-bold mb-4">Quick Links</h3>
+                    <ul class="space-y-2">
+                        <li><a href="index.html" class="text-gray-400 hover:text-white transition duration-300">Home</a></li>
+                        <li><a href="feature.html" class="text-gray-400 hover:text-white transition duration-300">Our Specialty</a></li>
+                        <li><a href="products.html" class="text-gray-400 hover:text-white transition duration-300">Menu</a></li>
+                        <li><a href="contact.html" class="text-gray-400 hover:text-white transition duration-300">Contact</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h3 class="text-lg font-bold mb-4">Opening Hours</h3>
+                    <ul class="space-y-2 text-gray-400">
+                        <li class="flex justify-between">
+                            <span>Monday - Thursday</span>
+                            <span>11AM - 10PM</span>
+                        </li>
+                        <li class="flex justify-between">
+                            <span>Friday - Saturday</span>
+                            <span>11AM - 11PM</span>
+                        </li>
+                        <li class="flex justify-between">
+                            <span>Sunday</span>
+                            <span>11AM - 9PM</span>
+                        </li>
+                    </ul>
+                </div>
+                <div>
+                    <h3 class="text-lg font-bold mb-4">Follow Us</h3>
+                    <div class="flex space-x-4 mb-4">
+                        <a href="#" class="text-gray-400 hover:text-white transition duration-300">
+                            <i data-feather="facebook" class="w-6 h-6"></i>
+                        </a>
+                        <a href="#" class="text-gray-400 hover:text-white transition duration-300">
+                            <i data-feather="instagram" class="w-6 h-6"></i>
+                        </a>
+                        <a href="#" class="text-gray-400 hover:text-white transition duration-300">
+                            <i data-feather="twitter" class="w-6 h-6"></i>
+                        </a>
+                    </div>
+                    <div>
+                        <h4 class="font-bold mb-2">Subscribe to Newsletter</h4>
+                        <div class="flex">
+                            <input type="email" placeholder="Your Email" class="px-3 py-2 bg-gray-800 text-white rounded-l-md focus:outline-none w-full">
+                            <button class="bg-red-600 hover:bg-red-700 px-4 py-2 rounded-r-md transition duration-300">
+                                <i data-feather="send" class="w-4 h-4"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="border-t border-gray-800 mt-8 pt-8 text-center text-gray-400">
+                <p>&copy; 2023 Crab King. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        AOS.init({
+            duration: 800,
+            easing: 'ease-in-out',
+            once: true
+        });
+        feather.replace();
+        
+        // Mobile menu toggle
+        const mobileMenuButton = document.querySelector('.mobile-menu-button');
+        const mobileMenu = document.querySelector('.mobile-menu');
+        
+        mobileMenuButton.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+    </script>
+</body>
+</html>
