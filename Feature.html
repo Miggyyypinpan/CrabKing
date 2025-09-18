@@ -17,7 +17,7 @@
         }
         .feature-hero {
             background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),
-                        url('http://static.photos/food/1200x630/43');
+                       url('images/hero-dining.jpeg');
             background-size: cover;
             background-position: center;
         }
@@ -31,7 +31,7 @@
             right: -50px;
             width: 40px;
             height: 2px;
-            background-color: #e5e7eb;
+            background-color: #1b2f57;
         }
         .infographic-item {
             transition: all 0.3s ease;
@@ -57,7 +57,7 @@
                 <div class="hidden md:flex space-x-8">
                     <a href="index.html" class="text-gray-800 hover:text-red-600">Home</a>
                     <a href="feature.html" class="text-red-600 font-semibold">Our Specialty</a>
-                    <a href="products.html" class="text-gray-800 hover:text-red-600">Menu</a>
+                    <a href="product.html" class="text-gray-800 hover:text-red-600">Menu</a>
                     <a href="contact.html" class="text-gray-800 hover:text-red-600">Contact</a>
                 </div>
                 <div class="md:hidden">
@@ -70,26 +70,26 @@
             <div class="mobile-menu hidden bg-white py-2">
                 <a href="index.html" class="block px-4 py-2 text-gray-800 hover:bg-gray-100">Home</a>
                 <a href="feature.html" class="block px-4 py-2 text-red-600 font-semibold">Our Specialty</a>
-                <a href="products.html" class="block px-4 py-2 text-gray-800 hover:bg-gray-100">Menu</a>
+                <a href="product.html" class="block px-4 py-2 text-gray-800 hover:bg-gray-100">Menu</a>
                 <a href="contact.html" class="block px-4 py-2 text-gray-800 hover:bg-gray-100">Contact</a>
             </div>
         </div>
     </nav>
 
     <!-- Feature Hero -->
-    <section class="feature-hero text-white py-20 md:py-32">
+    <section class="feature-hero text-white h-[550px] flex items-center justify-center">
         <div class="container mx-auto px-6 text-center">
-            <h1 class="text-4xl md:text-6xl font-bold mb-6" data-aos="fade-down">Our Signature Crab Experience</h1>
+            <h1 class="text-4xl md:text-6xl font-bold mb-12" data-aos="fade-down">Our Signature Crab Experience</h1>
             <p class="text-xl md:text-2xl mb-8" data-aos="fade-up" data-aos-delay="200">Discover what makes our crab dishes truly special</p>
         </div>
     </section>
 
     <!-- Feature Intro -->
-    <section class="py-16 bg-white">
+    <section class="py-16 bg-white h-[700px] flex items-center justify-center">
         <div class="container mx-auto px-6">
             <div class="flex flex-col md:flex-row items-center">
                 <div class="md:w-1/2 mb-8 md:mb-0" data-aos="fade-right">
-                    <img src="http://static.photos/food/640x360/44" alt="Crab King Signature Dish" class="rounded-lg shadow-xl w-full">
+                    <img src="images/crab-king-logo.png" alt="Crab King Signature Dish" class="w-auto h-480 object-contain mx-auto">
                 </div>
                 <div class="md:w-1/2 md:pl-12" data-aos="fade-left">
                     <h2 class="text-3xl font-bold text-gray-800 mb-4">The Crab King Difference</h2>
@@ -107,13 +107,13 @@
     </section>
 
     <!-- Process Infographic -->
-    <section class="py-16 bg-gray-100">
+    <section class="py-32 bg-gray-100 ">
         <div class="container mx-auto px-6">
-            <div class="text-center mb-12">
+            <div class="text-center mb-24">
                 <h2 class="text-3xl font-bold text-gray-800" data-aos="fade-down">Our Premium Process</h2>
                 <p class="text-gray-600 mt-2" data-aos="fade-up">From ocean to plate - our commitment to quality at every step</p>
             </div>
-            <div class="flex flex-col md:flex-row justify-between items-center mb-12">
+            <div class="flex flex-col md:flex-row justify-between items-center mb-32">
                 <!-- Process Step 1 -->
                 <div class="process-step text-center mb-8 md:mb-0" data-aos="fade-up" data-aos-delay="100">
                     <div class="bg-red-100 w-20 h-20 mx-auto rounded-full flex items-center justify-center mb-4">
@@ -152,31 +152,31 @@
             </div>
             
             <!-- Detailed Infographic -->
-            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8 mb-8">
                 <!-- Infographic Item 1 -->
-                <div class="infographic-item bg-white p-6 rounded-lg shadow-md" data-aos="zoom-in">
+                <div class="infographic-item bg-white p-6 py-16 px-16 rounded-lg shadow-md" data-aos="zoom-in">
                     <div class="bg-red-100 w-16 h-16 mx-auto rounded-full flex items-center justify-center mb-4">
                         <i data-feather="map-pin" class="w-8 h-8 text-red-600"></i>
                     </div>
-                    <h3 class="text-xl font-bold text-gray-800 mb-2 text-center">Local Sourcing</h3>
+                    <h3 class="text-xl font-bold text-gray-800 mb-6 text-center">Local Sourcing</h3>
                     <p class="text-gray-600 text-center">We partner with local fishermen in Subic and Masinloc to get the freshest crabs daily. Our crabs are caught using sustainable methods and transported live to our kitchen.</p>
                 </div>
                 
                 <!-- Infographic Item 2 -->
-                <div class="infographic-item bg-white p-6 rounded-lg shadow-md" data-aos="zoom-in" data-aos-delay="200">
+                <div class="infographic-item bg-white p-6 py-16 px-16 rounded-lg shadow-md" data-aos="zoom-in" data-aos-delay="200">
                     <div class="bg-red-100 w-16 h-16 mx-auto rounded-full flex items-center justify-center mb-4">
                         <i data-feather="shield" class="w-8 h-8 text-red-600"></i>
                     </div>
-                    <h3 class="text-xl font-bold text-gray-800 mb-2 text-center">Quality Standards</h3>
+                    <h3 class="text-xl font-bold text-gray-800 mb-6 text-center">Quality Standards</h3>
                     <p class="text-gray-600 text-center">Every crab must pass our 5-point inspection: lively movement, intact shell, proper weight, clean smell, and bright color. Only about 60% of deliveries meet our strict standards.</p>
                 </div>
                 
                 <!-- Infographic Item 3 -->
-                <div class="infographic-item bg-white p-6 rounded-lg shadow-md" data-aos="zoom-in" data-aos-delay="400">
+                <div class="infographic-item bg-white p-6 py-16 px-16 rounded-lg shadow-md" data-aos="zoom-in" data-aos-delay="400">
                     <div class="bg-red-100 w-16 h-16 mx-auto rounded-full flex items-center justify-center mb-4">
                         <i data-feather="clock" class="w-8 h-8 text-red-600"></i>
                     </div>
-                    <h3 class="text-xl font-bold text-gray-800 mb-2 text-center">Perfect Timing</h3>
+                    <h3 class="text-xl font-bold text-gray-800 mb-6 text-center">Perfect Timing</h3>
                     <p class="text-gray-600 text-center">Our chefs have perfected the exact cooking time for each crab size - 8 minutes for small, 10 for medium, and 12 for large. This ensures tender, juicy meat every time.</p>
                 </div>
             </div>
@@ -188,26 +188,28 @@
         <div class="container mx-auto px-6">
             <div class="flex flex-col md:flex-row items-center">
                 <div class="md:w-1/2 mb-8 md:mb-0" data-aos="fade-right">
-                    <img src="http://static.photos/food/640x360/45" alt="Signature Crab Dish" class="rounded-lg shadow-xl w-full">
+                    <img src="images/crab-hero.jpg" alt="Signature Crab Dish" class="rounded-lg shadow-xl w-full">
                 </div>
                 <div class="md:w-1/2 md:pl-12" data-aos="fade-left">
-                    <h2 class="text-3xl font-bold text-gray-800 mb-4">Our Signature King Crab</h2>
-                    <p class="text-gray-600 mb-6">The dish that made us famous - Alaskan King Crab legs prepared with our signature method:</p>
+                    <h2 class="text-3xl font-bold text-gray-800 mb-4">Our Signature Chili Crab</h2>
+                    <p class="text-gray-600 mb-6">
+                    Our signature Chili Crab – a bold and flavorful dish that has become a true crowd favorite:
+                    </p>
                     <div class="mb-6">
-                        <h3 class="text-xl font-semibold text-gray-800 mb-2">Preparation:</h3>
-                        <ul class="list-disc list-inside text-gray-600 space-y-2">
-                            <li>Live crabs humanely prepared just before cooking</li>
-                            <li>Steamed to perfection with lemongrass and bay leaves</li>
-                            <li>Tossed in our secret spice blend</li>
-                            <li>Served with house-made garlic butter sauce</li>
-                            <li>Garnished with fresh herbs and lemon wedges</li>
-                        </ul>
+                    <h3 class="text-xl font-semibold text-gray-800 mb-2">Preparation:</h3>
+                    <ul class="list-disc list-inside text-gray-600 space-y-2">
+                        <li>Fresh mud crabs selected for the perfect balance of meat and flavor</li>
+                        <li>Crabs cleaned and prepared just before cooking</li>
+                        <li>Stir-fried in a rich, savory, and spicy chili-tomato sauce</li>
+                        <li>Enhanced with garlic, ginger, and a touch of sweetness</li>
+                        <li>Served hot with steamed buns (mantou) to soak up the sauce</li>
+                    </ul>
                     </div>
                     <div class="flex items-center">
-                        <a href="products.html" class="bg-red-600 hover:bg-red-700 text-white font-bold py-2 px-6 rounded-md inline-block transition duration-300 mr-4">
+                        <a href="product.html" class="bg-red-600 hover:bg-red-700 text-white font-bold py-2 px-6 rounded-md inline-block transition duration-300 mr-4">
                             Order Now
                         </a>
-                        <span class="text-2xl font-bold text-red-600">₱1,299</span>
+                        <span class="text-2xl font-bold text-red-600">₱1,199</span>
                     </div>
                 </div>
             </div>
@@ -215,12 +217,12 @@
     </section>
 
     <!-- Call to Action -->
-    <section class="py-16 bg-red-600 text-white">
+    <section class="py-32 bg-red-600 text-white">
         <div class="container mx-auto px-6 text-center">
             <h2 class="text-3xl font-bold mb-6" data-aos="fade-down">Ready to Taste the Difference?</h2>
             <p class="text-xl mb-8" data-aos="fade-up">Experience our signature crab dishes today</p>
             <div data-aos="fade-up" data-aos-delay="200">
-                <a href="products.html" class="bg-white hover:bg-gray-100 text-red-600 font-bold py-3 px-8 rounded-full inline-block transition duration-300">
+                <a href="product.html" class="bg-white hover:bg-gray-100 text-red-600 font-medium py-3 px-8 rounded-full inline-block transition duration-300">
                     View Full Menu
                 </a>
             </div>
@@ -240,7 +242,7 @@
                     <ul class="space-y-2">
                         <li><a href="index.html" class="text-gray-400 hover:text-white transition duration-300">Home</a></li>
                         <li><a href="feature.html" class="text-red-500 font-semibold">Our Specialty</a></li>
-                        <li><a href="products.html" class="text-gray-400 hover:text-white transition duration-300">Menu</a></li>
+                        <li><a href="product.html" class="text-gray-400 hover:text-white transition duration-300">Menu</a></li>
                         <li><a href="contact.html" class="text-gray-400 hover:text-white transition duration-300">Contact</a></li>
                     </ul>
                 </div>
@@ -286,7 +288,7 @@
                 </div>
             </div>
             <div class="border-t border-gray-800 mt-8 pt-8 text-center text-gray-400">
-                <p>&copy; 2023 Crab King. All rights reserved.</p>
+                <p>; Disclaimer: This is Only a School Project, No copyright Intended</p>
             </div>
         </div>
     </footer>

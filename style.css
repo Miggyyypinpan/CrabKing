@@ -1,14 +1,13 @@
-/* Google Fonts */
+
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap');
 
-/* Global */
 body {
     font-family: 'Poppins', sans-serif;
     scroll-behavior: smooth;
-    background-color: #f9fafb; /* fallback bg */
+    background-color: #f9fafb; 
 }
 
-/* Hero Section */
+
 .hero {
     background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),
                 url('http://static.photos/food/1200x630/42');
@@ -16,7 +15,7 @@ body {
     background-position: center;
 }
 
-/* Menu Item Hover Effect */
+
 .menu-item {
     transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
@@ -25,15 +24,14 @@ body {
     box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
 }
 
-/* Navbar */
+
 nav a {
     transition: color 0.3s ease;
 }
 nav a:hover {
-    color: #dc2626; /* Tailwind red-600 */
+    color: #dc2626; 
 }
 
-/* Mobile Menu */
 .mobile-menu {
     display: none;
     background-color: #ffffff;
@@ -43,7 +41,7 @@ nav a:hover {
 .mobile-menu a {
     display: block;
     padding: 0.75rem 0;
-    color: #1f2937; /* gray-800 */
+    color: #1f2937; 
     transition: color 0.3s ease;
 }
 .mobile-menu a:hover {

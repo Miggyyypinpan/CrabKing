@@ -18,21 +18,21 @@ The created feature page before can be reuse but it is highly recommended to mak
 
 C. Product List Page
 
-A product list page  is a web page on an e-commerce or business website that displays a collection of products, often organized within a specific category, brand, or search result. It serves as an intermediate step in the customer journey, allowing users to browse and select items they may be interested in. Some of the purpose of this page are:
+A product list page  is a web page on an e-commerce or business website that displays a collection of product, often organized within a specific category, brand, or search result. It serves as an intermediate step in the customer journey, allowing users to browse and select items they may be interested in. Some of the purpose of this page are:
 
-Showing multiple products in a grid or list format, each with essential details such as product images, names, prices, ratings, and brief descriptions.
-Provides filters (e.g., price, size, color, brand) and sorting options (e.g., by popularity, price, or newest) to help users refine their search and find products that match their preferences quickly.
-Allows users to compare various products side-by-side based on key attributes, helping them make informed purchase decisions.
+Showing multiple product in a grid or list format, each with essential details such as product images, names, prices, ratings, and brief descriptions.
+Provides filters (e.g., price, size, color, brand) and sorting options (e.g., by popularity, price, or newest) to help users refine their search and find product that match their preferences quickly.
+Allows users to compare various product side-by-side based on key attributes, helping them make informed purchase decisions.
 Acts as a browsing tool that helps guide users toward product detail pages, where they can learn more about a specific item and make a purchase.
 Requirements:
 
-List of products or service should have an image, price, quantity(if applicable). Other details such as size, model, flavor, color, etc. should be also included when necessary.
-Each product or service should have a button that can be clicked which illustrate that the product or service has been selected. For products, this could be "Add to cart". For services, this could be "Avail service". This button should be working.
+List of product or service should have an image, price, quantity(if applicable). Other details such as size, model, flavor, color, etc. should be also included when necessary.
+Each product or service should have a button that can be clicked which illustrate that the product or service has been selected. For product, this could be "Add to cart". For services, this could be "Avail service". This button should be working.
 Searching for a particular product should be available.
-Rating the product should be available. If there are too many products, a minimum of 10 products is enough to have this feature. The way to rate a product is should be something unique or distinct from the existing ones,
+Rating the product should be available. If there are too many product, a minimum of 10 product is enough to have this feature. The way to rate a product is should be something unique or distinct from the existing ones,
 D. Contact Us Page
 
-A Contact Us page is a dedicated page on a website that provides visitors with various ways to get in touch with the company, organization, or individual behind the site. This page serves as a critical touchpoint for communication, making it easy for users to ask questions, request support, provide feedback, or inquire about products and services. The fields to include in this should be but not limited to the following:
+A Contact Us page is a dedicated page on a website that provides visitors with various ways to get in touch with the company, organization, or individual behind the site. This page serves as a critical touchpoint for communication, making it easy for users to ask questions, request support, provide feedback, or inquire about product and services. The fields to include in this should be but not limited to the following:
 
 Name of the customer
 Contact number of the customer

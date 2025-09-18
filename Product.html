@@ -17,7 +17,7 @@
         }
         .menu-hero {
             background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),
-                        url('http://static.photos/food/1200x630/46');
+                        url("images/hero-menu.jpg");
             background-size: cover;
             background-position: center;
         }
@@ -78,7 +78,7 @@
                 <div class="hidden md:flex space-x-8">
                     <a href="index.html" class="text-gray-800 hover:text-red-600">Home</a>
                     <a href="feature.html" class="text-gray-800 hover:text-red-600">Our Specialty</a>
-                    <a href="products.html" class="text-red-600 font-semibold">Menu</a>
+                    <a href="product.html" class="text-red-600 font-semibold">Menu</a>
                     <a href="contact.html" class="text-gray-800 hover:text-red-600">Contact</a>
                 </div>
                 <div class="flex items-center space-x-4">
@@ -99,14 +99,14 @@
             <div class="mobile-menu hidden bg-white py-2">
                 <a href="index.html" class="block px-4 py-2 text-gray-800 hover:bg-gray-100">Home</a>
                 <a href="feature.html" class="block px-4 py-2 text-gray-800 hover:bg-gray-100">Our Specialty</a>
-                <a href="products.html" class="block px-4 py-2 text-red-600 font-semibold">Menu</a>
+                <a href="product.html" class="block px-4 py-2 text-red-600 font-semibold">Menu</a>
                 <a href="contact.html" class="block px-4 py-2 text-gray-800 hover:bg-gray-100">Contact</a>
             </div>
         </div>
     </nav>
 
     <!-- Menu Hero -->
-    <section class="menu-hero text-white py-20 md:py-32">
+    <section class="menu-hero text-white py-20 md:py-32 h-[650px] flex items-center justify-center">
         <div class="container mx-auto px-6 text-center">
             <h1 class="text-4xl md:text-6xl font-bold mb-6" data-aos="fade-down">Our Premium Menu</h1>
             <p class="text-xl md:text-2xl mb-8" data-aos="fade-up" data-aos-delay="200">Discover our selection of exquisite seafood dishes</p>
@@ -114,7 +114,7 @@
     </section>
 
     <!-- Menu Navigation -->
-    <section class="py-8 bg-white sticky top-16 z-40 shadow-sm">
+    <section class="py-8 bg-white sticky top-[55px] z-40 shadow-sm">
         <div class="container mx-auto px-6">
             <div class="flex flex-wrap justify-center gap-2">
                 <button class="tab-button active px-4 py-2 rounded-full" data-category="all">All Items</button>
@@ -128,7 +128,7 @@
     </section>
 
     <!-- Search and Filter -->
-    <section class="py-8 bg-gray-100">
+    <section class="pt-24 bg-gray-100">
         <div class="container mx-auto px-6">
             <div class="flex flex-col md:flex-row items-center justify-between gap-4">
                 <div class="w-full md:w-1/3">
@@ -153,10 +153,9 @@
     </section>
 
     <!-- Menu Items -->
-    <section class="py-16 bg-gray-100">
+    <section class="py-32 bg-gray-100">
         <div class="container mx-auto px-6">
-            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8" id="menu-items-container">
-                <!-- Menu items will be dynamically inserted here -->
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10" id="menu-items-container">
             </div>
         </div>
     </section>
@@ -173,12 +172,12 @@
                 </div>
                 <div id="cart-items" class="mb-6">
                     <!-- Cart items will be dynamically inserted here -->
-                    <p class="text-gray-500 text-center py-8" id="empty-cart-message">Your cart is empty</p>
+                    <p id="empty-cart-message" class="text-gray-500 text-center py-8">Your cart is empty</p>
                 </div>
                 <div class="border-t border-gray-200 pt-4 mb-4">
                     <div class="flex justify-between mb-2">
                         <span class="text-gray-600">Subtotal:</span>
-                        <span class="font-bold" id="cart-subtotal">₱0</span>
+                        <span id="cart-subtotal" class="font-bold">₱0</span>
                     </div>
                     <div class="flex justify-between mb-2">
                         <span class="text-gray-600">Service Fee:</span>
@@ -195,6 +194,7 @@
             </div>
         </div>
     </div>
+
 
     <!-- Rating Modal -->
     <div id="rating-modal" class="fixed inset-0 bg-black bg-opacity-50 z-50 hidden flex items-center justify-center">
@@ -233,12 +233,12 @@
     </div>
 
     <!-- Call to Action -->
-    <section class="py-16 bg-red-600 text-white">
+    <section class="py-32 bg-red-600 text-white">
         <div class="container mx-auto px-6 text-center">
             <h2 class="text-3xl font-bold mb-6" data-aos="fade-down">Have Special Dietary Needs?</h2>
             <p class="text-xl mb-8" data-aos="fade-up">We're happy to accommodate special requests</p>
             <div data-aos="fade-up" data-aos-delay="200">
-                <a href="contact.html" class="bg-white hover:bg-gray-100 text-red-600 font-bold py-3 px-8 rounded-full inline-block transition duration-300">
+                <a href="contact.html" class="bg-white hover:bg-gray-100 text-red-600 font-medium py-3 px-8 rounded-full inline-block transition duration-300">
                     Contact Us
                 </a>
             </div>
@@ -258,7 +258,7 @@
                     <ul class="space-y-2">
                         <li><a href="index.html" class="text-gray-400 hover:text-white transition duration-300">Home</a></li>
                         <li><a href="feature.html" class="text-gray-400 hover:text-white transition duration-300">Our Specialty</a></li>
-                        <li><a href="products.html" class="text-red-500 font-semibold">Menu</a></li>
+                        <li><a href="product.html" class="text-red-500 font-semibold">Menu</a></li>
                         <li><a href="contact.html" class="text-gray-400 hover:text-white transition duration-300">Contact</a></li>
                     </ul>
                 </div>
@@ -304,19 +304,15 @@
                 </div>
             </div>
             <div class="border-t border-gray-800 mt-8 pt-8 text-center text-gray-400">
-                <p>&copy; 2023 Crab King. All rights reserved.</p>
+                <p>; Disclaimer: This is Only a School Project, No copyright Intended</p>
             </div>
         </div>
     </footer>
 
     <script>
-        AOS.init({
-            duration: 800,
-            easing: 'ease-in-out',
-            once: true
-        });
+        AOS.init({ duration: 800, easing: "ease-in-out", once: true });
         feather.replace();
-
+        
         // Menu data
         const menuItems = [
             {
@@ -325,7 +321,7 @@
                 description: "Alaskan King Crab legs with our secret spice blend and garlic butter sauce",
                 price: 1299,
                 category: "crabs",
-                image: "http://static.photos/food/640x360/10",
+                image: "images/card-menu-imgs/kingcrab.jpg",
                 rating: 4.8,
                 reviews: 124,
                 options: [
@@ -339,7 +335,7 @@
                 description: "Jumbo shrimp sautéed in garlic butter sauce with herbs",
                 price: 599,
                 category: "shrimps",
-                image: "http://static.photos/food/640x360/11",
+                image: "images/card-menu-imgs/butterhrimp.jpg",
                 rating: 4.5,
                 reviews: 89,
                 options: [
@@ -353,7 +349,7 @@
                 description: "Assorted seafood including crab, shrimp, mussels and clams",
                 price: 1499,
                 category: "platters",
-                image: "http://static.photos/food/640x360/12",
+                image: "images/card-menu-imgs/seafoodplatter.jpg",
                 rating: 4.7,
                 reviews: 76,
                 options: [
@@ -366,7 +362,7 @@
                 description: "Fresh lobster grilled to perfection with lemon butter sauce",
                 price: 1799,
                 category: "lobsters",
-                image: "http://static.photos/food/640x360/13",
+                image: "images/card-menu-imgs/grilledlobster.jpg",
                 rating: 4.9,
                 reviews: 65,
                 options: [
@@ -379,7 +375,7 @@
                 description: "Fragrant jasmine rice stir-fried with crab meat and vegetables",
                 price: 399,
                 category: "sides",
-                image: "http://static.photos/food/640x360/14",
+                image: "images/card-menu-imgs/CrabFriedRice.jpg",
                 rating: 4.3,
                 reviews: 42,
                 options: [
@@ -392,7 +388,7 @@
                 description: "Singapore-style crab in rich, spicy chili tomato sauce",
                 price: 1199,
                 category: "crabs",
-                image: "http://static.photos/food/640x360/15",
+                image: "images/card-menu-imgs/ChiliCrab.jpg",
                 rating: 4.6,
                 reviews: 58,
                 options: [
@@ -406,7 +402,7 @@
                 description: "Crab cooked in rich garlic butter sauce with parsley",
                 price: 1099,
                 category: "crabs",
-                image: "http://static.photos/food/640x360/16",
+                image: "images/card-menu-imgs/ButteredGarlicCrab-1.jpg",
                 rating: 4.7,
                 reviews: 72,
                 options: [
@@ -419,7 +415,7 @@
                 description: "Crispy shrimp seasoned with salt, pepper and five-spice",
                 price: 549,
                 category: "shrimps",
-                image: "http://static.photos/food/640x360/17",
+                image: "images/card-menu-imgs/SaltPepperShrimp.jpg",
                 rating: 4.4,
                 reviews: 47,
                 options: [
@@ -432,7 +428,7 @@
                 description: "Classic French-style lobster with creamy cheese sauce",
                 price: 1999,
                 category: "lobsters",
-                image: "http://static.photos/food/640x360/18",
+                image: "images/card-menu-imgs/LobsterThermidor.jpg",
                 rating: 4.8,
                 reviews: 38,
                 options: [
@@ -445,7 +441,7 @@
                 description: "Al dente pasta with mixed seafood in creamy tomato sauce",
                 price: 699,
                 category: "platters",
-                image: "http://static.photos/food/640x360/19",
+                image: "images/card-menu-imgs/SeafoodPasta.jpg",
                 rating: 4.2,
                 reviews: 53,
                 options: [
@@ -506,20 +502,20 @@
             let stars = '';
             const fullStars = Math.floor(rating);
             const hasHalfStar = rating % 1 >= 0.5;
-            
+
             for (let i = 0; i < fullStars; i++) {
                 stars += '<i data-feather="star" class="w-4 h-4 fill-current"></i>';
             }
-            
+
             if (hasHalfStar) {
                 stars += '<i data-feather="star" class="w-4 h-4 fill-current" style="clip-path: polygon(0 0, 50% 0, 50% 100%, 0 100%);"></i>';
             }
-            
+
             const emptyStars = 5 - fullStars - (hasHalfStar ? 1 : 0);
             for (let i = 0; i < emptyStars; i++) {
                 stars += '<i data-feather="star" class="w-4 h-4"></i>';
             }
-            
+
             return stars;
         }
 
@@ -529,7 +525,7 @@
                 button.addEventListener('click', function() {
                     document.querySelectorAll('.tab-button').forEach(btn => btn.classList.remove('active'));
                     this.classList.add('active');
-                    
+
                     const category = this.dataset.category;
                     if (category === 'all') {
                         renderMenuItems();
@@ -554,7 +550,7 @@
             document.getElementById('sort-by').addEventListener('change', function() {
                 const sortValue = this.value;
                 let sortedItems = [...menuItems];
-                
+
                 switch(sortValue) {
                     case 'popular':
                         sortedItems.sort((a, b) => b.reviews - a.reviews);
@@ -569,7 +565,7 @@
                         sortedItems.sort((a, b) => a.name.localeCompare(b.name));
                         break;
                 }
-                
+
                 renderMenuItems(sortedItems);
             });
 
@@ -579,16 +575,31 @@
                     const itemId = parseInt(e.target.dataset.id);
                     addToCart(itemId);
                 }
-                
+
                 if (e.target.classList.contains('rate-button')) {
                     const itemId = parseInt(e.target.dataset.id);
                     openRatingModal(itemId);
                 }
             });
 
-            // Cart modal
-            document.getElementById('cart-button').addEventListener('click', openCartModal);
+            // Cart modal toggle
+            document.getElementById('cart-button').addEventListener('click', () => {
+                const modal = document.getElementById('cart-modal');
+                if (modal.classList.contains('hidden')) {
+                    openCartModal();
+                } else {
+                    closeCartModal();
+                }
+            });
             document.getElementById('close-cart').addEventListener('click', closeCartModal);
+
+            // Close cart when clicking outside
+            document.getElementById('cart-modal').addEventListener('click', (e) => {
+                if (e.target === document.getElementById('cart-modal')) {
+                    closeCartModal();
+                }
+            });
+
             document.getElementById('checkout-button').addEventListener('click', checkout);
 
             // Rating modal
@@ -596,10 +607,84 @@
             document.getElementById('submit-rating').addEventListener('click', submitRating);
         }
 
+        document.addEventListener("DOMContentLoaded", () => {
+            const cartModal = document.getElementById("cart-modal");
+            const cartButton = document.getElementById("cart-button");
+            const closeCartButton = document.getElementById("close-cart");
+            const cartItemsContainer = document.getElementById("cart-items");
+            const emptyCartMessage = document.getElementById("empty-cart-message");
+            const subtotalElement = document.getElementById("cart-subtotal");
+            const totalElement = document.getElementById("cart-total");
+
+            let cart = [];
+            let products = [
+                { id: 1, name: "Signature King Crab", price: 1299 },
+                { id: 2, name: "Garlic Butter Shrimp", price: 599 },
+                { id: 3, name: "Seafood Platter", price: 1499 },
+                { id: 4, name: "Grilled Lobster", price: 1799 },
+                { id: 5, name: "Crab Fried Rice", price: 399 },
+                { id: 6, name: "Chili Crab", price: 1199 },
+                { id: 7, name: "Buttered Garlic Crab", price: 1099 },
+                { id: 8, name: "Salt & Pepper Shrimp", price: 549 },
+                { id: 9, name: "Lobster Thermidor", price: 1999 },
+                { id: 10, name: "Seafood Pasta", price: 699 }
+            ];
+
+
+            function renderCart() {
+                cartItemsContainer.innerHTML = "";
+                if (cart.length === 0) {
+                emptyCartMessage.style.display = "block";
+                } else {
+                emptyCartMessage.style.display = "none";
+                cart.forEach(item => {
+                    const itemDiv = document.createElement("div");
+                    itemDiv.classList.add("flex", "justify-between", "mb-2");
+                    itemDiv.innerHTML = `
+                    <span>${item.name} x${item.qty}</span>
+                    <span>₱${item.price * item.qty}</span>
+                    `;
+                    cartItemsContainer.appendChild(itemDiv);
+                });
+                }
+                const subtotal = cart.reduce((sum, item) => sum + item.price * item.qty, 0);
+                subtotalElement.textContent = `₱${subtotal}`;
+                totalElement.textContent = `₱${subtotal + 50}`;
+            }
+
+            function openCartModal() {
+                renderCart();
+                cartModal.classList.remove("hidden");
+            }
+
+            function closeCartModal() {
+                cartModal.classList.add("hidden");
+            }
+
+            cartButton.addEventListener("click", openCartModal);
+            closeCartButton.addEventListener("click", closeCartModal);
+
+            document.querySelectorAll(".add-to-cart").forEach(button => {
+                button.addEventListener("click", () => {
+                const id = parseInt(button.dataset.id);
+                const product = products.find(p => p.id === id);
+                if (!product) return;
+                const existing = cart.find(item => item.id === id);
+                if (existing) {
+                    existing.qty += 1;
+                } else {
+                    cart.push({ ...product, qty: 1 });
+                }
+                });
+            });
+        });
+
+
+
         function addToCart(itemId) {
             const item = menuItems.find(i => i.id === itemId);
             const existingItem = cart.find(i => i.id === itemId);
-            
+
             if (existingItem) {
                 existingItem.quantity += 1;
             } else {
@@ -608,7 +693,7 @@
                     quantity: 1
                 });
             }
-            
+
             updateCartCount();
             showAddToCartNotification(item.name);
         }
@@ -616,7 +701,7 @@
         function updateCartCount() {
             const count = cart.reduce((total, item) => total + item.quantity, 0);
             const cartCount = document.getElementById('cart-count');
-            
+
             if (count > 0) {
                 cartCount.textContent = count;
                 cartCount.classList.remove('hidden');
@@ -634,7 +719,7 @@
             `;
             document.body.appendChild(notification);
             feather.replace();
-            
+
             setTimeout(() => {
                 notification.classList.add('opacity-0', 'transition-opacity', 'duration-300');
                 setTimeout(() => notification.remove(), 300);
@@ -645,7 +730,7 @@
             const modal = document.getElementById('cart-modal');
             const cartItems = document.getElementById('cart-items');
             const emptyMessage = document.getElementById('empty-cart-message');
-            
+
             if (cart.length === 0) {
                 cartItems.innerHTML = '';
                 emptyMessage.classList.remove('hidden');
@@ -668,7 +753,7 @@
                         </div>
                     </div>
                 `).join('');
-                
+
                 // Add event listeners to remove buttons
                 document.querySelectorAll('.remove-item').forEach(button => {
                     button.addEventListener('click', function() {
@@ -677,12 +762,12 @@
                     });
                 });
             }
-            
+
             // Update totals
             const subtotal = cart.reduce((total, item) => total + (item.price * item.quantity), 0);
             document.getElementById('cart-subtotal').textContent = `₱${subtotal.toLocaleString()}`;
             document.getElementById('cart-total').textContent = `₱${(subtotal + 50).toLocaleString()}`;
-            
+
             modal.classList.remove('hidden');
             feather.replace();
         }
@@ -707,7 +792,7 @@
         function openRatingModal(itemId) {
             const item = menuItems.find(i => i.id === itemId);
             currentRatingItem = item;
-            
+
             document.getElementById('rating-item-name').textContent = item.name;
             document.getElementById('rating-modal').classList.remove('hidden');
         }
@@ -720,12 +805,12 @@
 
         function submitRating() {
             const rating = document.querySelector('.star-rating input:checked')?.value;
-            
+
             if (!rating) {
                 alert('Please select a star rating');
                 return;
             }
-            
+
             alert(`Thank you for rating "${currentRatingItem.name}" with ${rating} stars!`);
             closeRatingModal();
         }
@@ -738,5 +823,6 @@
             mobileMenu.classList.toggle('hidden');
         });
     </script>
+
 </body>
 </html>
