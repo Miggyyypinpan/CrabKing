@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Facebook Post Mockup</title>
+  <style>
+    body { background: #e9ebee; font-family: Arial, sans-serif; padding: 20px; }
+    .fb-post { max-width: 600px; margin: auto; background: white; border-radius: 8px; box-shadow: 0 2px 4px rgba(0,0,0,0.1); }
+    .fb-topbar { background: #1877f2; color: white; padding: 10px; text-align: center; font-weight: bold; font-size: 20px; }
+    .fb-header { display: flex; align-items: center; padding: 15px; }
+    .fb-header img { width: 40px; height: 40px; border-radius: 50%; margin-right: 10px; }
+    .fb-header .name { font-weight: bold; }
+    .fb-header .time { color: gray; font-size: 12px; margin-top: 2px; }
+    .fb-content { font-size: 15px; line-height: 1.4; padding: 0 15px 15px; }
+    .hashtags { color: #1877f2; margin-top: 8px; }
+  </style>
+</head>
+<body>
+  <div class="fb-post">
+    <div class="fb-topbar">Facebook</div>
+    <div class="fb-header">
+      <img src="../images/placeholder.png" alt="Profile">
+      <div>
+        <div class="name" id="posterName">Customer Name</div>
+        <div class="time">Just now · 📱</div>
+      </div>
+    </div>
+    <div class="fb-content">
+      <p id="userMessage">This is my seafood experience! @CrabKing</p>
+      <p class="hashtags">#SeafoodLovers #CrabKing #FilipinoTradition</p>
+    </div>
+  </div>
+
+  <script>
+    const params = new URLSearchParams(window.location.search);
+    const name = params.get("name");
+    const message = params.get("message");
+    if (name) document.getElementById("posterName").textContent = name;
+    if (message) document.getElementById("userMessage").textContent = message + " @CrabKing";
+  </script>
+</body>
+</html>

@@ -1,246 +1,308 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Contact Us | Crab King</title>
-    <link rel="icon" type="image/png" href="images/faviconlogo.png" />
-    <script src="https://cdn.tailwindcss.com"></script>
-    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
-    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/feather-icons/dist/feather.min.js"></script>
-    <script src="https://unpkg.com/feather-icons"></script>
-    <style>
-        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap');
-        body {
-            font-family: 'Poppins', sans-serif;
-            scroll-behavior: smooth;
-        }
-        .contact-hero {
-            background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),
-                        url("images/hero-restaurant.jpeg");
-            background-size: cover;
-            background-position: center;
-        }
-        .map-container {
-            position: relative;
-            overflow: hidden;
-            padding-top: 56.25%; 
-        }
-        .map-container iframe {
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            border: 0;
-        }
-        .mobile-menu {
-            display: none;
-        }
-    </style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact Us | Crab King</title>
+  <link rel="icon" type="image/png" href="images/crab-king-logo.png" />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/feather-icons/dist/feather.min.js"></script>
+  <script src="https://unpkg.com/feather-icons"></script>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap');
+    body { font-family: 'Poppins', sans-serif; scroll-behavior: smooth; }
+    .contact-hero {
+      background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),
+                  url("images/hero-restaurant.jpeg");
+      background-size: cover;
+      background-position: center;
+    }
+    .map-container { position: relative; overflow: hidden; padding-top: 56.25%; }
+    .map-container iframe { position: absolute; top: 0; left: 0; width: 100%; height: 100%; border: 0; }
+    .mobile-menu { display: none; }
+  </style>
 </head>
 <body class="bg-gray-50">
-    <!-- Navigation -->
-    <nav class="bg-white shadow-lg sticky top-0 z-50">
-        <div class="container mx-auto px-6 py-3">
-            <div class="flex items-center justify-between">
-                <div class="flex items-center">
-                    <div class="text-2xl font-bold text-red-600">CRAB KING</div>
-                    <span class="ml-2 text-xs text-gray-500">Since 2021</span>
-                </div>
-                <div class="hidden md:flex space-x-8">
-                    <a href="index.html" class="text-gray-800 hover:text-red-600">Home</a>
-                    <a href="feature.html" class="text-gray-800 hover:text-red-600">Our Specialty</a>
-                    <a href="product.html" class="text-gray-800 hover:text-red-600">Menu</a>
-                    <a href="contact.html" class="text-red-600 font-semibold">Contact</a>
-                </div>
-                <div class="md:hidden">
-                    <button class="outline-none mobile-menu-button">
-                        <i data-feather="menu" class="w-6 h-6 text-gray-800"></i>
-                    </button>
-                </div>
-            </div>
-            <!-- Mobile Menu -->
-            <div class="mobile-menu hidden bg-white py-2">
-                <a href="index.html" class="block px-4 py-2 text-gray-800 hover:bg-gray-100">Home</a>
-                <a href="feature.html" class="block px-4 py-2 text-gray-800 hover:bg-gray-100">Our Specialty</a>
-                <a href="product.html" class="block px-4 py-2 text-gray-800 hover:bg-gray-100">Menu</a>
-                <a href="contact.html" class="block px-4 py-2 text-red-600 font-semibold">Contact</a>
-            </div>
+  <!-- NAVBAR -->
+  <nav class="bg-white shadow-lg sticky top-0 z-50">
+    <div class="container mx-auto px-6 py-3">
+      <div class="flex items-center justify-between">
+        <div class="flex items-center">
+          <div class="text-2xl font-bold text-red-600">CRAB KING</div>
+          <span class="ml-2 text-xs text-gray-500">Since 2021</span>
         </div>
-    </nav>
-
-    <!-- Contact Hero -->
-    <section class="contact-hero text-white py-20 md:py-32 h-[500px] flex items-center justify-center">
-        <div class="container mx-auto px-6 text-center">
-            <h1 class="text-4xl md:text-6xl font-bold mb-6" data-aos="fade-down">Get In Touch</h1>
-            <p class="text-xl md:text-2xl mb-8" data-aos="fade-up" data-aos-delay="200">We'd love to hear from you</p>
+        <div class="hidden md:flex space-x-8">
+          <a href="index.html" class="text-gray-800 hover:text-red-600">Home</a>
+          <a href="feature.html" class="text-gray-800 hover:text-red-600">Our Specialty</a>
+          <a href="product.html" class="text-gray-800 hover:text-red-600">Menu</a>
+          <a href="contact.html" class="text-red-600 font-semibold">Contact</a>
         </div>
-    </section>
+        <div class="md:hidden">
+          <button class="outline-none mobile-menu-button">
+            <i data-feather="menu" class="w-6 h-6 text-gray-800"></i>
+          </button>
+        </div>
+      </div>
+      <div class="mobile-menu hidden bg-white py-2">
+        <a href="index.html" class="block px-4 py-2 text-gray-800 hover:bg-gray-100">Home</a>
+        <a href="feature.html" class="block px-4 py-2 text-gray-800 hover:bg-gray-100">Our Specialty</a>
+        <a href="product.html" class="block px-4 py-2 text-gray-800 hover:bg-gray-100">Menu</a>
+        <a href="contact.html" class="block px-4 py-2 text-red-600 font-semibold">Contact</a>
+      </div>
+    </div>
+  </nav>
 
-    <!-- Contact Content -->
+  <!-- HERO -->
+  <section class="contact-hero text-white py-20 md:py-32 h-[500px] flex items-center justify-center">
+    <div class="container mx-auto px-6 text-center">
+      <h1 class="text-4xl md:text-6xl font-bold mb-6" data-aos="fade-down">Get In Touch</h1>
+      <p class="text-xl md:text-2xl mb-8" data-aos="fade-up" data-aos-delay="200">We'd love to hear from you</p>
+    </div>
+  </section>
+
+    <!-- CONTACT SECTION -->
     <section class="py-48 bg-white">
-        <div class="container mx-auto px-6">
-            <div class="flex flex-col md:flex-row gap-12">
-                <div class="md:w-1/2" data-aos="fade-right">
-                    <h2 class="text-3xl font-bold text-gray-800 mb-6">Contact Information</h2>
-                    <div class="space-y-6">
-                        <div class="flex items-start">
-                            <div class="bg-red-100 p-3 rounded-full mr-4">
-                                <i data-feather="map-pin" class="w-6 h-6 text-red-600"></i>
-                            </div>
-                            <div>
-                                <h3 class="text-xl font-semibold text-gray-800 mb-1">Address</h3>
-                                <p class="text-gray-600">Blk 29, Lot 13, Fil-Am Friendship Highway<br>Angeles City, Philippines</p>
-                            </div>
-                        </div>
-                        <div class="flex items-start">
-                            <div class="bg-red-100 p-3 rounded-full mr-4">
-                                <i data-feather="phone" class="w-6 h-6 text-red-600"></i>
-                            </div>
-                            <div>
-                                <h3 class="text-xl font-semibold text-gray-800 mb-1">Phone</h3>
-                                <p class="text-gray-600">0908 878 8282</p>
-                            </div>
-                        </div>
-                        <div class="flex items-start">
-                            <div class="bg-red-100 p-3 rounded-full mr-4">
-                                <i data-feather="mail" class="w-6 h-6 text-red-600"></i>
-                            </div>
-                            <div>
-                                <h3 class="text-xl font-semibold text-gray-800 mb-1">Email</h3>
-                                <p class="text-gray-600">gosoosportsbar@gmail.com</p>
-                            </div>
-                        </div>
-                        <div class="flex items-start">
-                            <div class="bg-red-100 p-3 rounded-full mr-4">
-                                <i data-feather="clock" class="w-6 h-6 text-red-600"></i>
-                            </div>
-                            <div>
-                                <h3 class="text-xl font-semibold text-gray-800 mb-1">Opening Hours</h3>
-                                <p class="text-gray-600">Monday - Sunday: 11AM - 10PM</p>
-                            </div>
-                        </div>
-                    </div>
+    <div class="container mx-auto px-6">
+        <div class="flex flex-col md:flex-row gap-12">
+        <!-- Contact Info -->
+        <div class="md:w-1/2" data-aos="fade-right">
+            <h2 class="text-3xl font-bold text-gray-800 mb-6">Contact Information</h2>
+            <div class="space-y-6">
+            <div class="flex items-start">
+                <div class="bg-red-100 p-3 rounded-full mr-4">
+                <i data-feather="map-pin" class="w-6 h-6 text-red-600"></i>
                 </div>
-                <div class="md:w-1/2" data-aos="fade-left">
-                    <h2 class="text-3xl font-bold text-gray-800 mb-6">Send Us a Message</h2>
-                    <form class="space-y-4">
-                        <div>
-                            <label for="name" class="block text-gray-700 font-medium mb-1">Full Name</label>
-                            <input type="text" id="name" class="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-red-600">
-                        </div>
-                        <div>
-                            <label for="email" class="block text-gray-700 font-medium mb-1">Email Address</label>
-                            <input type="email" id="email" class="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-red-600">
-                        </div>
-                        <div>
-                            <label for="phone" class="block text-gray-700 font-medium mb-1">Phone Number</label>
-                            <input type="tel" id="phone" class="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-red-600">
-                        </div>
-                        <div>
-                            <label for="message" class="block text-gray-700 font-medium mb-1">Your Message</label>
-                            <textarea id="message" rows="4" class="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-red-600"></textarea>
-                        </div>
-                        <button type="submit" class="bg-red-600 hover:bg-red-700 text-white font-bold py-3 px-6 rounded-md transition duration-300">
-                            Send Message
-                        </button>
-                    </form>
+                <div>
+                <h3 class="text-xl font-semibold text-gray-800 mb-1">Address</h3>
+                <p class="text-gray-600">Blk 29, Lot 13, Fil-Am Friendship Highway<br>Angeles City, Philippines</p>
                 </div>
             </div>
+            <div class="flex items-start">
+                <div class="bg-red-100 p-3 rounded-full mr-4">
+                <i data-feather="phone" class="w-6 h-6 text-red-600"></i>
+                </div>
+                <div>
+                <h3 class="text-xl font-semibold text-gray-800 mb-1">Phone</h3>
+                <p class="text-gray-600">0908 878 8282</p>
+                </div>
+            </div>
+            <div class="flex items-start">
+                <div class="bg-red-100 p-3 rounded-full mr-4">
+                <i data-feather="mail" class="w-6 h-6 text-red-600"></i>
+                </div>
+                <div>
+                <h3 class="text-xl font-semibold text-gray-800 mb-1">Email</h3>
+                <p class="text-gray-600">gosoosportsbar@gmail.com</p>
+                </div>
+            </div>
+            <div class="flex items-start">
+                <div class="bg-red-100 p-3 rounded-full mr-4">
+                <i data-feather="clock" class="w-6 h-6 text-red-600"></i>
+                </div>
+                <div>
+                <h3 class="text-xl font-semibold text-gray-800 mb-1">Opening Hours</h3>
+                <p class="text-gray-600">Monday - Sunday: 11AM - 10PM</p>
+                </div>
+            </div>
+            </div>
         </div>
+
+        <!-- Forms Section -->
+        <div class="md:w-1/2" data-aos="fade-left">
+            <!-- Contact Form -->
+            <div>
+            <h2 class="text-3xl font-bold text-gray-800 mb-6">Send Us a Message</h2>
+            <form id="contactForm" class="space-y-4">
+                <div>
+                <label for="name" class="block text-gray-700 font-medium mb-1">Full Name</label>
+                <input type="text" id="name" required
+                    class="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-red-600">
+                </div>
+                <div>
+                <label for="email" class="block text-gray-700 font-medium mb-1">Email Address</label>
+                <input type="email" id="email" required
+                    class="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-red-600">
+                </div>
+                <div>
+                <label for="phone" class="block text-gray-700 font-medium mb-1">Phone Number</label>
+                <input type="tel" id="phone" required
+                    class="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-red-600">
+                </div>
+                <div>
+                <label for="message" class="block text-gray-700 font-medium mb-1">Your Message</label>
+                <textarea id="message" rows="4" required
+                    class="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-red-600"></textarea>
+                </div>
+                <button type="submit"
+                class="bg-red-600 hover:bg-red-700 text-white font-bold py-3 px-6 rounded-md transition duration-300">
+                Send Message
+                </button>
+            </form>
+            </div>
+        </div>
+        </div>
+    </div>
     </section>
 
-    <!-- Map Section -->
-    <section class="py-48 bg-gray-100">
-        <div class="container mx-auto px-6">
-            <h2 class="text-3xl font-semibold text-gray-800 mb-24 text-center">Find Us</h2>
-            <div class="map-container rounded-lg shadow-xl overflow-hidden">
-                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3851.437377729148!2d120.56455527306332!3d15.134305963791506!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3396f3f5253d906d%3A0x3bea8bdd367eff73!2sCrab%20King!5e0!3m2!1sen!2sph!4v1758123702343!5m2!1sen!2sph" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-            </div>
-        </div>
-    </section>
+  <!-- MAP -->
+  <section class="py-48 bg-gray-100">
+    <div class="container mx-auto px-6">
+      <h2 class="text-3xl font-semibold text-gray-800 mb-8 text-center">Find Us</h2>
+        <div class="text-center mt-6">
+        <a href="https://www.google.com/maps/dir/?api=1&destination=Crab+King,+Angeles+City,+Philippines" target="_blank"
+          class="bg-red-600 hover:bg-red-700 text-white font-bold py-3 px-6 rounded-md transition duration-300 inline-block mb-16">
+          Visit Crab King
+        </a>
+      </div>
+      <div class="map-container max-w-7xl rounded-lg mx-auto shadow-xl overflow-hidden">
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3851.437377729148!2d120.56455527306332!3d15.134305963791506!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3396f3f5253d906d%3A0x3bea8bdd367eff73!2sCrab%20King!5e0!3m2!1sen!2sph!4v1758123702343!5m2!1sen!2sph" allowfullscreen="" loading="lazy"></iframe>
+      </div>
+    </div>
+  </section>
 
-    <!-- Footer -->
-    <footer class="bg-gray-900 text-white py-12">
-        <div class="container mx-auto px-6">
-            <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
-                <div>
-                    <div class="text-2xl font-bold text-red-600 mb-4">CRAB KING</div>
-                    <p class="text-gray-400">Premium seafood restaurant serving Angeles City since 2021.</p>
-                </div>
-                <div>
-                    <h3 class="text-lg font-bold mb-4">Quick Links</h3>
-                    <ul class="space-y-2">
-                        <li><a href="index.html" class="text-gray-400 hover:text-white transition duration-300">Home</a></li>
-                        <li><a href="feature.html" class="text-gray-400 hover:text-white transition duration-300">Our Specialty</a></li>
-                        <li><a href="product.html" class="text-gray-400 hover:text-white transition duration-300">Menu</a></li>
-                        <li><a href="contact.html" class="text-red-500 font-semibold">Contact</a></li>
-                    </ul>
-                </div>
-                <div>
-                    <h3 class="text-lg font-bold mb-4">Opening Hours</h3>
-                    <ul class="space-y-2 text-gray-400">
-                        <li class="flex justify-between">
-                            <span>Monday - Thursday</span>
-                            <span>11AM - 10PM</span>
-                        </li>
-                        <li class="flex justify-between">
-                            <span>Friday - Saturday</span>
-                            <span>11AM - 11PM</span>
-                        </li>
-                        <li class="flex justify-between">
-                            <span>Sunday</span>
-                            <span>11AM - 9PM</span>
-                        </li>
-                    </ul>
-                </div>
-                <div>
-                    <h3 class="text-lg font-bold mb-4">Follow Us</h3>
-                    <div class="flex space-x-4 mb-4">
-                        <a href="#" class="text-gray-400 hover:text-white transition duration-300">
-                            <i data-feather="facebook" class="w-6 h-6"></i>
-                        </a>
-                        <a href="#" class="text-gray-400 hover:text-white transition duration-300">
-                            <i data-feather="instagram" class="w-6 h-6"></i>
-                        </a>
-                        <a href="#" class="text-gray-400 hover:text-white transition duration-300">
-                            <i data-feather="twitter" class="w-6 h-6"></i>
-                        </a>
-                    </div>
-                    <div>
-                        <h4 class="font-bold mb-2">Subscribe to Newsletter</h4>
-                        <div class="flex">
-                            <input type="email" placeholder="Your Email" class="px-3 py-2 bg-gray-800 text-white rounded-l-md focus:outline-none w-full">
-                            <button class="bg-red-600 hover:bg-red-700 px-4 py-2 rounded-r-md transition duration-300">
-                                <i data-feather="send" class="w-4 h-4"></i>
-                            </button>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="border-t border-gray-800 mt-8 pt-8 text-center text-gray-400">
-                <p>; Disclaimer: This is Only a School Project, No copyright Intended</p>
-            </div>
-        </div>
-    </footer>
 
-    <script>
-        AOS.init({
-            duration: 800,
-            easing: 'ease-in-out',
-            once: true
-        });
-        feather.replace();
-        
-        // Mobile menu toggle
-        const mobileMenuButton = document.querySelector('.mobile-menu-button');
-        const mobileMenu = document.querySelector('.mobile-menu');
-        
-        mobileMenuButton.addEventListener('click', () => {
-            mobileMenu.classList.toggle('hidden');
-        });
-    </script>
+  <!-- Experience Form BELOW Contact -->
+    <div class="mt-32 max-w-7xl mx-auto bg-white border rounded-2xl shadow-lg p-10 mb-18" data-aos="fade-up">
+        <div class="text-center mb-8">
+            <h2 class="text-2xl md:text-3xl font-extrabold text-red-600 mb-6 ">Share Your Experience</h2>
+            <p class="text-gray-600 mt-2 text-sm md:text-base mb-12">
+            We’d love to hear your story! Tell us about your visit and share your favorite moments.
+            </p>
+        </div>
+
+        <form id="experienceForm" class="space-y-6" >
+            <div>
+            <label for="expName" class="block text-gray-700 font-medium mb-2">Your Name</label>
+            <input type="text" id="expName" required
+                class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-red-600 shadow-sm">
+            </div>
+
+            <div>
+            <label for="expMessage" class="block text-gray-700 font-medium mb-2">Your Experience</label>
+            <textarea id="expMessage" rows="4" required
+                class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-red-600 shadow-sm"></textarea>
+            </div>
+
+            <div>
+            <label for="expImage" class="block text-gray-700 font-medium mb-2">Upload an Image (optional)</label>
+            <input type="file" id="expImage" accept="image/*"
+                class="w-full px-3 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-red-600 text-sm bg-gray-50 cursor-pointer">
+            </div>
+
+            <div>
+            <label for="expPlatform" class="block text-gray-700 font-medium mb-2">Choose Platform</label>
+            <select id="expPlatform" required
+                class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-red-600 shadow-sm bg-white">
+                <option value="">Select Platform</option>
+                <option value="facebook">Facebook</option>
+                <option value="instagram">Instagram</option>
+                <option value="twitter">Twitter</option>
+                <option value="email">Email</option>
+            </select>
+            </div>
+
+            <div class="text-center">
+            <button type="submit"
+                class="bg-red-600 hover:bg-red-700 text-white font-bold py-3 px-8 rounded-lg shadow-md transition duration-300 mt-6 mb-6">
+                Share Experience
+            </button>
+            </div>
+        </form>
+    </div>
+
+  <!-- FOOTER -->
+  <footer class="bg-gray-900 text-white py-12 mt-24">
+    <div class="container mx-auto px-6">
+      <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+        <div>
+          <div class="text-2xl font-bold text-red-600 mb-4">CRAB KING</div>
+          <p class="text-gray-400">Premium seafood restaurant serving Angeles City since 2021.</p>
+        </div>
+        <div>
+          <h3 class="text-lg font-bold mb-4">Quick Links</h3>
+          <ul class="space-y-2">
+            <li><a href="index.html" class="text-gray-400 hover:text-white transition duration-300">Home</a></li>
+            <li><a href="feature.html" class="text-gray-400 hover:text-white transition duration-300">Our Specialty</a></li>
+            <li><a href="product.html" class="text-gray-400 hover:text-white transition duration-300">Menu</a></li>
+            <li><a href="contact.html" class="text-red-500 font-semibold">Contact</a></li>
+          </ul>
+        </div>
+        <div>
+          <h3 class="text-lg font-bold mb-4">Opening Hours</h3>
+          <ul class="space-y-2 text-gray-400">
+            <li class="flex justify-between"><span>Monday - Thursday</span><span>11AM - 10PM</span></li>
+            <li class="flex justify-between"><span>Friday - Saturday</span><span>11AM - 11PM</span></li>
+            <li class="flex justify-between"><span>Sunday</span><span>11AM - 9PM</span></li>
+          </ul>
+        </div>
+        <div>
+          <h3 class="text-lg font-bold mb-4">Follow Us</h3>
+          <div class="flex space-x-4 mb-4">
+            <a href="#" class="text-gray-400 hover:text-white transition duration-300">
+              <i data-feather="facebook" class="w-6 h-6"></i>
+            </a>
+            <a href="#" class="text-gray-400 hover:text-white transition duration-300">
+              <i data-feather="instagram" class="w-6 h-6"></i>
+            </a>
+            <a href="#" class="text-gray-400 hover:text-white transition duration-300">
+              <i data-feather="twitter" class="w-6 h-6"></i>
+            </a>
+          </div>
+          <div>
+            <h4 class="font-bold mb-2">Subscribe to Newsletter</h4>
+            <div class="flex">
+              <input type="email" placeholder="Your Email" class="px-3 py-2 bg-gray-800 text-white rounded-l-md focus:outline-none w-full">
+              <button class="bg-red-600 hover:bg-red-700 px-4 py-2 rounded-r-md transition duration-300">
+                <i data-feather="send" class="w-4 h-4"></i>
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="border-t border-gray-800 mt-8 pt-8 text-center text-gray-400">
+        <p>; Disclaimer: This is Only a School Project, No copyright Intended</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- SCRIPT -->
+  <script>
+    AOS.init({ duration: 800, easing: 'ease-in-out', once: true });
+    feather.replace();
+
+    const mobileMenuButton = document.querySelector('.mobile-menu-button');
+    const mobileMenu = document.querySelector('.mobile-menu');
+    mobileMenuButton.addEventListener('click', () => {
+      mobileMenu.classList.toggle('hidden');
+    });
+
+    // Contact Form Handler
+    document.getElementById("contactForm").addEventListener("submit", function(event) {
+      event.preventDefault(); 
+      alert("Your message has been sent successfully! ✅");
+      document.getElementById("contactForm").reset();
+    });
+
+    // Experience Form Handler
+    document.getElementById("experienceForm").addEventListener("submit", function(event) {
+      event.preventDefault();
+      const name = document.getElementById("expName").value;
+      const message = document.getElementById("expMessage").value;
+      const platform = document.getElementById("expPlatform").value;
+      let targetPage = "";
+      if (platform === "email") targetPage = "mock_pages/email-marketing.html";
+      if (platform === "facebook") targetPage = "mock_pages/facebook-post.html";
+      if (platform === "instagram") targetPage = "mock_pages/instagram-post.html";
+      if (platform === "twitter") targetPage = "mock_pages/twitter-post.html";
+     if (targetPage) {
+        window.open(
+        `${targetPage}?name=${encodeURIComponent(name)}&message=${encodeURIComponent(message)}`,
+        "_blank"
+        );
+    }
+    });
+  </script>
 </body>
 </html>

@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Twitter Post Mockup</title>
+  <style>
+    body { background: #e6ecf0; font-family: Arial, sans-serif; padding: 20px; }
+    .tweet { max-width: 500px; margin: auto; background: white; border: 1px solid #ccc; border-radius: 8px; }
+    .tweet-topbar { background: #1DA1F2; color: white; padding: 10px; text-align: center; font-weight: bold; font-size: 20px; }
+    .tweet-header { display: flex; align-items: center; padding: 15px; }
+    .tweet-header img { width: 40px; height: 40px; border-radius: 50%; margin-right: 10px; }
+    .tweet-header .name { font-weight: bold; }
+    .tweet-header .handle { color: gray; font-size: 14px; margin-left: 5px; }
+    .tweet-content { font-size: 15px; line-height: 1.4; padding: 0 15px 15px; }
+    .hashtags { color: #1877f2; margin-top: 6px; }
+  </style>
+</head>
+<body>
+  <div class="tweet">
+    <div class="tweet-topbar">Twitter</div>
+    <div class="tweet-header">
+      <img src="../images/placeholder.png" alt="Profile">
+      <div>
+        <span class="name" id="posterName">Customer Name</span>
+        <span class="handle">@crabkingfan</span><br>
+        <small>Just now</small>
+      </div>
+    </div>
+    <div class="tweet-content">
+      <p id="userMessage">Crab cravings satisfied! @CrabKing</p>
+      <p class="hashtags">#SeafoodLovers #CrabKing #FilipinoTradition</p>
+    </div>
+  </div>
+
+  <script>
+    const params = new URLSearchParams(window.location.search);
+    const name = params.get("name");
+    const message = params.get("message");
+    if (name) document.getElementById("posterName").textContent = name;
+    if (message) document.getElementById("userMessage").textContent = message + " @CrabKing";
+  </script>
+</body>
+</html>

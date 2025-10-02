@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Instagram Post Mockup</title>
+  <style>
+    body { background: #fafafa; font-family: Arial, sans-serif; padding: 20px; }
+    .ig-post { max-width: 400px; margin: auto; background: white; border: 1px solid #ddd; border-radius: 8px; overflow: hidden; }
+    .ig-topbar { 
+      background: linear-gradient(45deg, #f09433 0%, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888 100%);
+      color: white; 
+      padding: 10px; 
+      text-align: center; 
+      font-weight: bold; 
+      font-size: 18px; 
+    }
+    .ig-header { display: flex; align-items: center; padding: 10px; }
+    .ig-header img { width: 40px; height: 40px; border-radius: 50%; margin-right: 10px; }
+    .ig-content { padding: 10px; font-size: 15px; line-height: 1.4; }
+    .user-name { font-weight: bold; }
+    .hashtags { color: #1877f2; margin-top: 6px; }
+  </style>
+</head>
+<body>
+  <div class="ig-post">
+    <div class="ig-topbar">Instagram</div>
+    <div class="ig-header">
+      <img src="../images/placeholder.png" alt="Profile">
+      <span class="user-name" id="posterName">Customer Name</span>
+    </div>
+    <div class="ig-content">
+      <p id="userMessage">Loving this seafood feast! @CrabKing</p>
+      <p class="hashtags">#SeafoodLovers #CrabKing #FilipinoTradition</p>
+    </div>
+  </div>
+
+  <script>
+    const params = new URLSearchParams(window.location.search);
+    const name = params.get("name");
+    const message = params.get("message");
+    if (name) document.getElementById("posterName").textContent = name;
+    if (message) document.getElementById("userMessage").textContent = message + " @CrabKing";
+  </script>
+</body>
+</html>
