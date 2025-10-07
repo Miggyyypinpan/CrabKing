@@ -1,31 +1,55 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Email Marketing Mockup</title>
-  <style>
-    body { font-family: Arial, sans-serif; background: #f4f4f4; margin:0; padding:20px; }
-    .email-container { max-width:600px; margin:auto; background:#fff; border-radius:8px; overflow:hidden; box-shadow:0 2px 6px rgba(0,0,0,0.2); }
-    .header { background:#b91c1c; color:white; padding:20px; text-align:center; }
-    .content { padding:20px; }
-    .cta { display:inline-block; padding:12px 24px; background:#b91c1c; color:white; text-decoration:none; border-radius:6px; margin-top:15px; }
-    .footer { font-size:12px; color:#555; text-align:center; padding:15px; background:#f0f0f0; }
-  </style>
+  <script src="https://cdn.tailwindcss.com"></script>
 </head>
-<body>
-  <div class="email-container">
-    <div class="header">
-      <h1>🦀 Crab King Special!</h1>
+<body class="bg-gray-100 font-sans p-6 py-12">
+  <div class="max-w-xl mx-auto bg-white rounded-lg shadow-lg overflow-hidden">
+    <!-- Header -->
+    <div class="bg-red-700 text-white text-center py-6">
+      <h1 class="text-2xl font-bold">🦀 Crab King Special!</h1>
     </div>
-    <div class="content">
-      <h2>Fresh Seafood, Filipino Tradition</h2>
-      <p>Enjoy our latest promo this weekend. Get <strong>20% off</strong> on all Crab King platters!</p>
-      <a href="../Product.html" class="cta">Order Now</a>
+
+    <!-- Content -->
+    <div class="p-6">
+      <h2 class="text-xl font-semibold text-gray-800 mb-2">Fresh Seafood, Filipino Tradition</h2>
+      <p class="text-gray-700 leading-relaxed">
+        Email has been sent ! Thank you for contacting us
+      </p>
+
+      <a href="../Product.html"
+         class="inline-block mt-4 bg-red-700 text-white font-semibold px-6 py-3 rounded-md hover:bg-red-800 transition-colors">
+         Order Food
+      </a>
+
+      <!-- Dynamic section -->
+      <div class="mt-6 border-t border-gray-200 pt-4">
+        <p class="text-gray-800 text-sm">
+          <span class="font-bold text-red-700" id="userName">Customer Name</span> says:
+        </p>
+        <p class="mt-2 text-gray-600 italic" id="userMessage">
+          “Can’t wait to try the new Crab King promo!”
+        </p>
+      </div>
     </div>
-    <div class="footer">
-      <p>Crab King • 123 Seafood Angeles 
+
+    <img src="../images/email_crab_king.png">
+
+    <!-- Footer -->
+    <div class="bg-gray-100 text-center text-gray-600 text-xs py-4">
+      Crab King • 123 Seafood Street, Angeles City, Philippines
     </div>
   </div>
+
+  <script>
+    const params = new URLSearchParams(window.location.search);
+    const name = params.get("name");
+    const message = params.get("message");
+    if (name) document.getElementById("userName").textContent = name;
+    if (message) document.getElementById("userMessage").textContent = `“${message}”`;
+  </script>
 </body>
 </html>
