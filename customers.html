@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Customer Information</title>
+  <link rel="icon" type="image/png" href="images/crab-king-logo.png" />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    /* Hover row effect */
+    tbody tr {
+      transition: all 0.2s ease;
+    }
+    tbody tr:hover {
+      background-color: #fee2e2; /* light red */
+      transform: scale(1.01);
+      cursor: pointer;
+    }
+  </style>
+</head>
+<body class="font-sans bg-gray-50 min-h-screen flex flex-col items-center p-6">
+
+  <!-- Back to Admin -->
+  <a href="admin.html"
+     class="fixed top-5 left-5 bg-red-700 text-white px-5 py-2 rounded-full shadow-md hover:bg-red-600 transition z-50">
+     ← Back
+  </a>
+
+  <!-- Page Title -->
+  <h1 class="text-3xl md:text-4xl font-bold text-red-700 mb-6 mt-12 text-center">
+    Customer Information
+  </h1>
+
+  <!-- Search Bar -->
+  <div class="w-full max-w-2xl mb-6">
+    <input type="text"
+           id="searchInput"
+           placeholder="Search customers..."
+           class="w-full px-4 py-2 border border-gray-300 rounded-lg shadow-sm focus:outline-none focus:ring-2 focus:ring-red-600">
+  </div>
+
+  <!-- Customer Table -->
+  <div class="w-full max-w-4xl overflow-x-auto">
+    <table class="w-full border border-gray-200 shadow-md rounded-lg overflow-hidden">
+      <thead class="bg-red-700 text-white">
+        <tr>
+          <th class="py-3 px-4 text-left">Name</th>
+          <th class="py-3 px-4 text-left">Email</th>
+          <th class="py-3 px-4 text-left">Phone</th>
+        </tr>
+      </thead>
+      <tbody id="customerTable" class="bg-white divide-y divide-gray-200">
+        <tr>
+          <td class="py-3 px-4">Juan Dela Cruz</td>
+          <td class="py-3 px-4">juan@email.com</td>
+          <td class="py-3 px-4">09123456789</td>
+        </tr>
+        <tr>
+          <td class="py-3 px-4">Maria Santos</td>
+          <td class="py-3 px-4">maria@email.com</td>
+          <td class="py-3 px-4">09876543210</td>
+        </tr>
+        <tr>
+          <td class="py-3 px-4">Carlos Reyes</td>
+          <td class="py-3 px-4">carlos@email.com</td>
+          <td class="py-3 px-4">09112223344</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <script>
+    // Search Functionality
+    document.getElementById("searchInput").addEventListener("input", function() {
+      const searchTerm = this.value.toLowerCase();
+      const rows = document.querySelectorAll("#customerTable tr");
+
+      rows.forEach(row => {
+        const rowText = row.textContent.toLowerCase();
+        if (rowText.includes(searchTerm)) {
+          row.style.display = "";
+        } else {
+          row.style.display = "none";
+        }
+      });
+    });
+  </script>
+
+</body>
+</html>

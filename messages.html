@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Customer Messages</title>
+  <link rel="icon" type="image/png" href="images/crab-king-logo.png" />
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="font-sans bg-gray-50 min-h-screen flex flex-col items-center p-6">
+
+  <!-- Back to Admin -->
+  <a href="admin.html"
+     class="fixed top-5 left-5 bg-red-700 text-white px-5 py-2 rounded-full shadow-md hover:bg-red-600 transition z-50">
+     ← Back
+  </a>
+
+  <!-- Page Title -->
+  <h1 class="text-3xl md:text-4xl font-bold text-red-700 mb-6 mt-12 text-center">
+    Contact Us Messages
+  </h1>
+
+  <!-- Search Bar -->
+  <div class="w-full max-w-2xl mb-6">
+    <input type="text"
+           id="searchInput"
+           placeholder="Search messages..."
+           class="w-full px-4 py-2 border border-gray-300 rounded-lg shadow-sm focus:outline-none focus:ring-2 focus:ring-red-600">
+  </div>
+
+  <!-- Scrollable Messages Container -->
+  <div class="w-full max-w-4xl h-[500px] overflow-y-auto border border-gray-200 rounded-lg shadow-md bg-white p-4 space-y-4">
+    
+    <!-- Message Card 1 -->
+    <div class="message-card bg-gray-50 border border-gray-200 rounded-lg p-4 shadow hover:shadow-lg transition">
+      <div class="flex justify-between items-center mb-2">
+        <h2 class="font-semibold text-red-700">Juan Dela Cruz</h2>
+        <span class="text-sm text-gray-500">2025-10-01</span>
+      </div>
+      <p class="text-sm text-gray-600 mb-1"><strong>Email:</strong> juan@email.com</p>
+      <p class="text-sm text-gray-600 mb-1"><strong>Phone:</strong> 09123456789</p>
+      <p class="text-gray-700">Hello, I would like to ask about your crab platter promos.</p>
+    </div>
+
+    <!-- Message Card 2 -->
+    <div class="message-card bg-gray-50 border border-gray-200 rounded-lg p-4 shadow hover:shadow-lg transition">
+      <div class="flex justify-between items-center mb-2">
+        <h2 class="font-semibold text-red-700">Maria Santos</h2>
+        <span class="text-sm text-gray-500">2025-09-30</span>
+      </div>
+      <p class="text-sm text-gray-600 mb-1"><strong>Email:</strong> maria@email.com</p>
+      <p class="text-sm text-gray-600 mb-1"><strong>Phone:</strong> 09876543210</p>
+      <p class="text-gray-700">Do you cater for birthday parties? Looking for seafood trays.</p>
+    </div>
+
+    <!-- Message Card 3 -->
+    <div class="message-card bg-gray-50 border border-gray-200 rounded-lg p-4 shadow hover:shadow-lg transition">
+      <div class="flex justify-between items-center mb-2">
+        <h2 class="font-semibold text-red-700">Carlos Reyes</h2>
+        <span class="text-sm text-gray-500">2025-09-29</span>
+      </div>
+      <p class="text-sm text-gray-600 mb-1"><strong>Email:</strong> carlos@email.com</p>
+      <p class="text-sm text-gray-600 mb-1"><strong>Phone:</strong> 09112223344</p>
+      <p class="text-gray-700">I enjoyed the King Crab dish! Can I reserve again this weekend?</p>
+    </div>
+
+    <div class="message-card bg-gray-50 border border-gray-200 rounded-lg p-4 shadow hover:shadow-lg transition">
+      <div class="flex justify-between items-center mb-2">
+        <h2 class="font-semibold text-red-700">Alexander Manabat</h2>
+        <span class="text-sm text-gray-500">2025-09-29</span>
+      </div>
+      <p class="text-sm text-gray-600 mb-1"><strong>Email:</strong> alexmanabat@email.com</p>
+      <p class="text-sm text-gray-600 mb-1"><strong>Phone:</strong> 09112223344</p>
+      <p class="text-gray-700">Crab king was awsome</p>
+    </div>
+
+  </div>
+
+  <script>
+    // Search functionality (filters cards by content)
+    document.getElementById("searchInput").addEventListener("input", function() {
+      const searchTerm = this.value.toLowerCase();
+      const messages = document.querySelectorAll(".message-card");
+
+      messages.forEach(card => {
+        const text = card.textContent.toLowerCase();
+        card.style.display = text.includes(searchTerm) ? "" : "none";
+      });
+    });
+  </script>
+
+</body>
+</html>
